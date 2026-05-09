@@ -1,0 +1,10 @@
+[
+  {
+    "id": "demo_mcq_001",
+    "question": "A child with febrile seizures and a loss-of-function SCN1A variant is diagnosed with Dravet syndrome. Which medication should generally be avoided?",
+    "options": ["A) Valproate", "B) Clobazam", "C) Carbamazepine", "D) Stiripentol"],
+    "correct_answer": "C",
+    "answer": "Carbamazepine"
+  }
+]
+

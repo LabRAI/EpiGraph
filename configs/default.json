@@ -1,0 +1,35 @@
+{
+  "kg": {
+    "triplets": "data/epikg/triplets.json",
+    "paper_metadata": "data/epikg/paper_metadata.json",
+    "max_subgraph_nodes": 30,
+    "max_paths": 12,
+    "ppr_alpha": 0.15
+  },
+  "models": {
+    "provider": "openrouter",
+    "closed": [
+      "openai/gpt-4o",
+      "anthropic/claude-sonnet-4",
+      "google/gemini-2.0-flash-001",
+      "meta-llama/llama-3.3-70b-instruct",
+      "qwen/qwen-2.5-72b-instruct",
+      "mistralai/mistral-small-3.1-24b-instruct"
+    ],
+    "local_t2": [
+      "medgemma-4b-it",
+      "qwen3-4b-it-2507",
+      "llama-3.2-3b-instruct",
+      "phi-4-mini-instruct"
+    ],
+    "judge_model": "openai/gpt-4.1-mini"
+  },
+  "data": {
+    "t1": "data/epibench/t1",
+    "t2": "data/private/harvard_eeg",
+    "t3": "data/epibench/t3",
+    "t4": "data/epibench/t4",
+    "t5": "data/epibench/t5"
+  }
+}
+
