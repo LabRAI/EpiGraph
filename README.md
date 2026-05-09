@@ -14,7 +14,7 @@
 
 ## What This Folder Contains
 
-This is a clean, paper-aligned code bundle for **EpiGraph: A Knowledge Graph and Benchmark for Evidence-Intensive Reasoning in Epilepsy**.
+This is the code bundle for **EpiGraph: A Knowledge Graph and Benchmark for Evidence-Intensive Reasoning in Epilepsy**.
 
 It includes:
 
