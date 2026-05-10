@@ -8,20 +8,10 @@
 
 <p>
   <a href="./docs"><img alt="Project Page" src="https://img.shields.io/badge/Project%20Page-Interactive%20KG-4F46E5?style=for-the-badge"></a>
-  <a href="https://github.com/LabRAI/EpiGraph/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/LabRAI/EpiGraph?style=for-the-badge&logo=github&color=EAB308"></a>
-  <a href="https://github.com/LabRAI/EpiGraph/network/members"><img alt="GitHub forks" src="https://img.shields.io/github/forks/LabRAI/EpiGraph?style=for-the-badge&logo=github&color=14B8A6"></a>
-  <a href="https://github.com/LabRAI/EpiGraph/watchers"><img alt="GitHub watchers" src="https://img.shields.io/github/watchers/LabRAI/EpiGraph?style=for-the-badge&logo=github&color=7C3AED"></a>
-  <a href="https://github.com/LabRAI/EpiGraph/releases"><img alt="GitHub downloads" src="https://img.shields.io/github/downloads/LabRAI/EpiGraph/total?style=for-the-badge&logo=github&color=0EA5E9"></a>
-  <a href="https://github.com/LabRAI/EpiGraph/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/LabRAI/EpiGraph?style=for-the-badge&logo=github&color=EF4444"></a>
-</p>
-
-<p>
-  <img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white">
-  <img alt="Graph RAG" src="https://img.shields.io/badge/Graph--RAG-PPR%20%2B%20Paths-7C3AED?style=flat-square">
-  <img alt="EpiBench" src="https://img.shields.io/badge/EpiBench-5%20Tasks-14B8A6?style=flat-square">
-  <a href="./LICENSE"><img alt="License" src="https://img.shields.io/github/license/LabRAI/EpiGraph?style=flat-square&color=0F766E"></a>
-  <img alt="Last commit" src="https://img.shields.io/github/last-commit/LabRAI/EpiGraph?style=flat-square&color=64748B">
-  <img alt="Repo size" src="https://img.shields.io/github/repo-size/LabRAI/EpiGraph?style=flat-square&color=64748B">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white">
+  <img alt="Graph RAG" src="https://img.shields.io/badge/Graph--RAG-PPR%20%2B%20Paths-7C3AED?style=for-the-badge">
+  <img alt="EpiBench" src="https://img.shields.io/badge/EpiBench-5%20Tasks-14B8A6?style=for-the-badge">
+  <a href="./LICENSE"><img alt="License" src="https://img.shields.io/github/license/LabRAI/EpiGraph?style=for-the-badge&color=0F766E"></a>
 </p>
 
 <p>
@@ -29,7 +19,8 @@
   <a href="#highlights">Highlights</a> ·
   <a href="#quick-start">Quick Start</a> ·
   <a href="#epibench-tasks">Tasks</a> ·
-  <a href="#citation">Citation</a>
+  <a href="#citation">Citation</a> ·
+  <a href="#repository-metrics">Metrics</a>
 </p>
 
 </div>
@@ -329,6 +320,22 @@ If you use EpiGraph, EpiBench, or this code release, please cite:
   year={2026}
 }
 ```
+
+---
+
+## Repository Metrics
+
+<div align="center">
+
+<a href="https://github.com/LabRAI/EpiGraph/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/LabRAI/EpiGraph?style=for-the-badge&logo=github&color=EAB308"></a>
+<a href="https://github.com/LabRAI/EpiGraph/network/members"><img alt="GitHub forks" src="https://img.shields.io/github/forks/LabRAI/EpiGraph?style=for-the-badge&logo=github&color=14B8A6"></a>
+<a href="https://github.com/LabRAI/EpiGraph/watchers"><img alt="GitHub watchers" src="https://img.shields.io/github/watchers/LabRAI/EpiGraph?style=for-the-badge&logo=github&color=7C3AED"></a>
+<a href="https://github.com/LabRAI/EpiGraph/releases"><img alt="GitHub downloads" src="https://img.shields.io/github/downloads/LabRAI/EpiGraph/total?style=for-the-badge&logo=github&color=0EA5E9"></a>
+<a href="https://github.com/LabRAI/EpiGraph/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/LabRAI/EpiGraph?style=for-the-badge&logo=github&color=EF4444"></a>
+<img alt="Last commit" src="https://img.shields.io/github/last-commit/LabRAI/EpiGraph?style=for-the-badge&color=64748B">
+<img alt="Repo size" src="https://img.shields.io/github/repo-size/LabRAI/EpiGraph?style=for-the-badge&color=64748B">
+
+</div>
 
 ---
 
