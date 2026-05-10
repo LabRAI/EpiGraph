@@ -1,0 +1,2463 @@
+{
+  "meta": {
+    "name": "EpiGraph demo subgraph",
+    "description": "A compact public demo sampled from the EpiGraph triplet schema for interactive project-page exploration.",
+    "nodes": 39,
+    "links": 120
+  },
+  "nodes": [
+    {
+      "id": "Tuberous Sclerosis Complex",
+      "label": "Tuberous Sclerosis Complex",
+      "layer": "Syndrome",
+      "source": "OMIM",
+      "degree": 13
+    },
+    {
+      "id": "TSC1",
+      "label": "TSC1",
+      "layer": "Gene",
+      "source": "OMIM",
+      "degree": 3
+    },
+    {
+      "id": "TSC2",
+      "label": "TSC2",
+      "layer": "Gene",
+      "source": "OMIM",
+      "degree": 2
+    },
+    {
+      "id": "Dravet Syndrome",
+      "label": "Dravet Syndrome",
+      "layer": "Syndrome",
+      "source": "ILAE_2022",
+      "degree": 15
+    },
+    {
+      "id": "SCN1A",
+      "label": "SCN1A",
+      "layer": "Gene",
+      "source": "OMIM",
+      "degree": 16
+    },
+    {
+      "id": "Status Epilepticus",
+      "label": "Status Epilepticus",
+      "layer": "Syndrome",
+      "source": "MeSH_D",
+      "degree": 19
+    },
+    {
+      "id": "Phenytoin",
+      "label": "Phenytoin",
+      "layer": "Treatment",
+      "source": "CHEBI",
+      "degree": 19
+    },
+    {
+      "id": "Valproate",
+      "label": "Valproate",
+      "layer": "Treatment",
+      "source": "CHEBI",
+      "degree": 27
+    },
+    {
+      "id": "Febrile Seizures",
+      "label": "Febrile Seizures",
+      "layer": "Syndrome",
+      "source": "MeSH_D",
+      "degree": 9
+    },
+    {
+      "id": "Electrographic Seizure",
+      "label": "Electrographic Seizure",
+      "layer": "Phenotype",
+      "source": "curator",
+      "degree": 5
+    },
+    {
+      "id": "Seizure Freedom",
+      "label": "Seizure Freedom",
+      "layer": "Outcome",
+      "source": "curator",
+      "degree": 15
+    },
+    {
+      "id": "Carbamazepine",
+      "label": "Carbamazepine",
+      "layer": "Treatment",
+      "source": "CHEBI",
+      "degree": 20
+    },
+    {
+      "id": "Lamotrigine",
+      "label": "Lamotrigine",
+      "layer": "Treatment",
+      "source": "CHEBI",
+      "degree": 15
+    },
+    {
+      "id": "SCN2A",
+      "label": "SCN2A",
+      "layer": "Gene",
+      "source": "OMIM",
+      "degree": 5
+    },
+    {
+      "id": "Neonatal Seizures",
+      "label": "Neonatal Seizures",
+      "layer": "Syndrome",
+      "source": "ILAE_2022",
+      "degree": 4
+    },
+    {
+      "id": "KCNQ2",
+      "label": "KCNQ2",
+      "layer": "Gene",
+      "source": "OMIM",
+      "degree": 5
+    },
+    {
+      "id": "Vigabatrin",
+      "label": "Vigabatrin",
+      "layer": "Treatment",
+      "source": "CHEBI",
+      "degree": 7
+    },
+    {
+      "id": "Ketogenic Diet",
+      "label": "Ketogenic Diet",
+      "layer": "Treatment",
+      "source": "MeSH_D",
+      "degree": 14
+    },
+    {
+      "id": "Everolimus",
+      "label": "Everolimus",
+      "layer": "Treatment",
+      "source": "CHEBI",
+      "degree": 3
+    },
+    {
+      "id": "Clobazam",
+      "label": "Clobazam",
+      "layer": "Treatment",
+      "source": "CHEBI",
+      "degree": 8
+    },
+    {
+      "id": "Stiripentol",
+      "label": "Stiripentol",
+      "layer": "Treatment",
+      "source": "CHEBI",
+      "degree": 3
+    },
+    {
+      "id": "SCN8A",
+      "label": "SCN8A",
+      "layer": "Gene",
+      "source": "OMIM",
+      "degree": 3
+    },
+    {
+      "id": "Epileptic Seizures",
+      "label": "Epileptic Seizures",
+      "layer": "L_unknown",
+      "source": "auto_discovered",
+      "degree": 6
+    },
+    {
+      "id": "Lennox-Gastaut Syndrome",
+      "label": "Lennox-Gastaut Syndrome",
+      "layer": "Syndrome",
+      "source": "ILAE_2022",
+      "degree": 9
+    },
+    {
+      "id": "Refractory Status Epilepticus",
+      "label": "Refractory Status Epilepticus",
+      "layer": "Syndrome",
+      "source": "curator",
+      "degree": 4
+    },
+    {
+      "id": "Tonic-Clonic Seizures",
+      "label": "Tonic-Clonic Seizures",
+      "layer": "L_unknown",
+      "source": "auto_discovered",
+      "degree": 4
+    },
+    {
+      "id": "Antiseizure",
+      "label": "Antiseizure",
+      "layer": "L_unknown",
+      "source": "auto_discovered",
+      "degree": 6
+    },
+    {
+      "id": "SLC2A1",
+      "label": "SLC2A1",
+      "layer": "Gene",
+      "source": "OMIM",
+      "degree": 2
+    },
+    {
+      "id": "POLG",
+      "label": "POLG",
+      "layer": "Gene",
+      "source": "OMIM",
+      "degree": 2
+    },
+    {
+      "id": "Absence Seizures",
+      "label": "Absence Seizures",
+      "layer": "L_unknown",
+      "source": "auto_discovered",
+      "degree": 3
+    },
+    {
+      "id": "GLUT1 Deficiency Syndrome",
+      "label": "GLUT1 Deficiency Syndrome",
+      "layer": "Syndrome",
+      "source": "OMIM",
+      "degree": 2
+    },
+    {
+      "id": "Myoclonic Seizures",
+      "label": "Myoclonic Seizures",
+      "layer": "L_unknown",
+      "source": "auto_discovered",
+      "degree": 3
+    },
+    {
+      "id": "Fenfluramine",
+      "label": "Fenfluramine",
+      "layer": "Treatment",
+      "source": "CHEBI",
+      "degree": 1
+    },
+    {
+      "id": "Antiseizure Medications",
+      "label": "Antiseizure Medications",
+      "layer": "L_unknown",
+      "source": "auto_discovered",
+      "degree": 4
+    },
+    {
+      "id": "50% Seizure Reduction",
+      "label": "50% Seizure Reduction",
+      "layer": "Outcome",
+      "source": "curator",
+      "degree": 3
+    },
+    {
+      "id": "Tonic-Clonic Seizure",
+      "label": "Tonic-Clonic Seizure",
+      "layer": "L_unknown",
+      "source": "auto_discovered",
+      "degree": 2
+    },
+    {
+      "id": "Focal Seizures",
+      "label": "Focal Seizures",
+      "layer": "L_unknown",
+      "source": "auto_discovered",
+      "degree": 4
+    },
+    {
+      "id": "Antiseizure Medication",
+      "label": "Antiseizure Medication",
+      "layer": "L_unknown",
+      "source": "auto_discovered",
+      "degree": 3
+    },
+    {
+      "id": "Clonic Seizures",
+      "label": "Clonic Seizures",
+      "layer": "L_unknown",
+      "source": "auto_discovered",
+      "degree": 3
+    }
+  ],
+  "links": [
+    {
+      "source": "Tuberous Sclerosis Complex",
+      "target": "TSC1",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 319,
+      "confidence": 0.85,
+      "supporting_papers": [
+        "pmc_2117357",
+        "pmc_6592065",
+        "pmc_8094642",
+        "pmc_2778501",
+        "pmc_6666377",
+        "pmc_4268334",
+        "pmc_6624115",
+        "pmc_4042127"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tuberous Sclerosis Complex",
+      "target": "TSC2",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 312,
+      "confidence": 0.85,
+      "supporting_papers": [
+        "pmc_2117357",
+        "pmc_6592065",
+        "pmc_8094642",
+        "pmc_2778501",
+        "pmc_6688052",
+        "pmc_6940974",
+        "pmc_4268334",
+        "pmc_6624115"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Dravet Syndrome",
+      "target": "SCN1A",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 302,
+      "confidence": 0.85,
+      "supporting_papers": [
+        "pmc_531663",
+        "pmc_4001207",
+        "pmc_10695662",
+        "pmc_12785442",
+        "pmc_12784395",
+        "pmc_2474506",
+        "pmc_2384156",
+        "pmc_12757226"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Status Epilepticus",
+      "target": "Phenytoin",
+      "relation": "TREATED_WITH",
+      "paper_count": 243,
+      "confidence": 0.85,
+      "supporting_papers": [
+        "pmc_2617750",
+        "pmc_1765634",
+        "pmc_3550077",
+        "pmc_2384151",
+        "pmc_1941906",
+        "pmc_1738579",
+        "pmc_2672045",
+        "pmc_6706647"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Status Epilepticus",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 219,
+      "confidence": 0.85,
+      "supporting_papers": [
+        "pmc_2812914",
+        "pmc_12813943",
+        "pmc_6891176",
+        "pmc_2566608",
+        "pmc_3550077",
+        "pmc_4019562",
+        "pmc_2384151",
+        "pmc_1941906"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Febrile Seizures",
+      "target": "SCN1A",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 189,
+      "confidence": 0.85,
+      "supporting_papers": [
+        "pmc_531663",
+        "pmc_4001207",
+        "pmc_2474506",
+        "pmc_2384156",
+        "pmc_12779327",
+        "pmc_1941906",
+        "pmc_1797883",
+        "pmc_12558023"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Status Epilepticus",
+      "target": "Electrographic Seizure",
+      "relation": "DIAGNOSED_BY",
+      "paper_count": 128,
+      "confidence": 0.85,
+      "supporting_papers": [
+        "pmc_4308028",
+        "pmc_2384156",
+        "pmc_4180479",
+        "pmc_2892718",
+        "pmc_4348706",
+        "pmc_12495666",
+        "pmc_6921236",
+        "pmc_6026023"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Valproate",
+      "target": "Seizure Freedom",
+      "relation": "TREATMENT_OUTCOME",
+      "paper_count": 124,
+      "confidence": 0.85,
+      "supporting_papers": [
+        "pmc_2668107",
+        "pmc_3469152",
+        "pmc_3181929",
+        "pmc_2531139",
+        "pmc_2621398",
+        "pmc_12599755",
+        "pmc_2532866",
+        "pmc_12716538"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Carbamazepine",
+      "target": "Seizure Freedom",
+      "relation": "TREATMENT_OUTCOME",
+      "paper_count": 110,
+      "confidence": 0.85,
+      "supporting_papers": [
+        "pmc_12603772",
+        "pmc_2677485",
+        "pmc_3469152",
+        "pmc_6599859",
+        "pmc_6837164",
+        "pmc_1889934",
+        "pmc_12716538",
+        "pmc_1737888"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Status Epilepticus",
+      "target": "Lamotrigine",
+      "relation": "TREATED_WITH",
+      "paper_count": 87,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_12813943",
+        "pmc_4019562",
+        "pmc_12779321",
+        "pmc_2384151",
+        "pmc_12779334",
+        "pmc_2080688",
+        "pmc_2042589",
+        "pmc_4107492"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Status Epilepticus",
+      "target": "Carbamazepine",
+      "relation": "TREATED_WITH",
+      "paper_count": 80,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_4019562",
+        "pmc_2080688",
+        "pmc_7137370",
+        "pmc_2764413",
+        "pmc_4952839",
+        "pmc_6757954",
+        "pmc_1737010",
+        "pmc_6611193"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Status Epilepticus",
+      "target": "Seizure Freedom",
+      "relation": "HAS_OUTCOME",
+      "paper_count": 80,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_2759041",
+        "pmc_2632796",
+        "pmc_12593945",
+        "pmc_3996129",
+        "pmc_3916907",
+        "pmc_2811703",
+        "pmc_6657533",
+        "pmc_4189645"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Dravet Syndrome",
+      "target": "SCN2A",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 75,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_4139700",
+        "pmc_531663",
+        "pmc_2795208",
+        "pmc_12839103",
+        "pmc_6658850",
+        "pmc_3708306",
+        "pmc_1867088",
+        "pmc_12620427"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Lamotrigine",
+      "target": "Seizure Freedom",
+      "relation": "TREATMENT_OUTCOME",
+      "paper_count": 74,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_12768112",
+        "pmc_12081254_pmid_40425109",
+        "pmc_6658850",
+        "pmc_6706642",
+        "pmc_6883323",
+        "pmc_2677485",
+        "pmc_2668107",
+        "pmc_12677161"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Phenytoin",
+      "target": "Seizure Freedom",
+      "relation": "TREATMENT_OUTCOME",
+      "paper_count": 73,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_12712479",
+        "pmc_2730002",
+        "pmc_6658850",
+        "pmc_12778868",
+        "pmc_488601",
+        "pmc_2677485",
+        "pmc_1867088",
+        "pmc_2384151"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Neonatal Seizures",
+      "target": "KCNQ2",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 68,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_2666110",
+        "pmc_4126888",
+        "pmc_6658850",
+        "pmc_6730048",
+        "pmc_12778868",
+        "pmc_12839103",
+        "pmc_11812603",
+        "pmc_1797886"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tuberous Sclerosis Complex",
+      "target": "Vigabatrin",
+      "relation": "TREATED_WITH",
+      "paper_count": 67,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_6649373",
+        "pmc_9078213",
+        "pmc_6803684",
+        "pmc_6592065",
+        "pmc_1719953",
+        "pmc_3880363",
+        "pmc_4135273",
+        "pmc_2676569"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Febrile Seizures",
+      "target": "SCN2A",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 64,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_531663",
+        "pmc_2767285",
+        "pmc_6849233",
+        "pmc_6658850",
+        "pmc_6796402",
+        "pmc_3708306",
+        "pmc_12779327",
+        "pmc_1867088"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Status Epilepticus",
+      "target": "Ketogenic Diet",
+      "relation": "TREATED_WITH",
+      "paper_count": 58,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_6668504",
+        "pmc_12663626",
+        "pmc_2859241",
+        "pmc_6610384",
+        "pmc_6722776",
+        "pmc_6737275",
+        "pmc_12744823",
+        "pmc_6759543"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tuberous Sclerosis Complex",
+      "target": "Everolimus",
+      "relation": "TREATED_WITH",
+      "paper_count": 58,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_6752247",
+        "pmc_6871528",
+        "pmc_6500021",
+        "pmc_6592065",
+        "pmc_6771448",
+        "pmc_12808708",
+        "pmc_12520851",
+        "pmc_12779334"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Febrile Seizures",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 49,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_1029827",
+        "pmc_6658850",
+        "pmc_6952031",
+        "pmc_12451219",
+        "pmc_2764413",
+        "pmc_6746890",
+        "pmc_1718261",
+        "pmc_12542317"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Status Epilepticus",
+      "target": "Clobazam",
+      "relation": "TREATED_WITH",
+      "paper_count": 46,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_12514371",
+        "pmc_4019562",
+        "pmc_12592108",
+        "pmc_6555868",
+        "pmc_12717023",
+        "pmc_1718261",
+        "pmc_7223986",
+        "pmc_3908738"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Dravet Syndrome",
+      "target": "Stiripentol",
+      "relation": "TREATED_WITH",
+      "paper_count": 46,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_6658850",
+        "pmc_12514371",
+        "pmc_6900043",
+        "pmc_6858858",
+        "pmc_6706642",
+        "pmc_6616248",
+        "pmc_6546444",
+        "pmc_12779334"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Ketogenic Diet",
+      "target": "Seizure Freedom",
+      "relation": "TREATMENT_OUTCOME",
+      "paper_count": 45,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_12768112",
+        "pmc_6658850",
+        "pmc_6706642",
+        "pmc_2676569",
+        "pmc_2859241",
+        "pmc_3945410",
+        "pmc_6694367",
+        "pmc_7281909"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Neonatal Seizures",
+      "target": "Phenytoin",
+      "relation": "TREATED_WITH",
+      "paper_count": 44,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_12712479",
+        "pmc_2666110",
+        "pmc_12778868",
+        "pmc_4284054",
+        "pmc_3014109",
+        "pmc_4391014",
+        "pmc_2566618",
+        "pmc_12483687"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Dravet Syndrome",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 43,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_6658850",
+        "pmc_6858858",
+        "pmc_6616248",
+        "pmc_12605728",
+        "pmc_6698679",
+        "pmc_7479698",
+        "pmc_12447324",
+        "pmc_3913306"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Dravet Syndrome",
+      "target": "SCN8A",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 43,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_4139700",
+        "pmc_12839103",
+        "pmc_6658850",
+        "pmc_12487680",
+        "pmc_6885657",
+        "pmc_4298829",
+        "pmc_4159172",
+        "pmc_3996114"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "SCN1A",
+      "target": "Carbamazepine",
+      "relation": "GENE_DRUG_ASSOC",
+      "paper_count": 40,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_2767285",
+        "pmc_6658850",
+        "pmc_11741965",
+        "pmc_6732506",
+        "pmc_4366142",
+        "pmc_2265812",
+        "pmc_6925949",
+        "pmc_1852745"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Dravet Syndrome",
+      "target": "Lamotrigine",
+      "relation": "TREATED_WITH",
+      "paper_count": 39,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_12768112",
+        "pmc_6658850",
+        "pmc_6858858",
+        "pmc_1867088",
+        "pmc_6616248",
+        "pmc_7479698",
+        "pmc_1718261",
+        "pmc_12779328"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Epileptic Seizures",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 38,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_6894132",
+        "pmc_4307363",
+        "pmc_2730009",
+        "pmc_3188138",
+        "pmc_1722723",
+        "pmc_4280904",
+        "pmc_1722707",
+        "pmc_1735357"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Status Epilepticus",
+      "target": "SCN1A",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 38,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_12839103",
+        "pmc_6658850",
+        "pmc_12514371",
+        "pmc_3708306",
+        "pmc_1867088",
+        "pmc_12697613",
+        "pmc_6624056",
+        "pmc_12460796"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Vigabatrin",
+      "target": "Seizure Freedom",
+      "relation": "TREATMENT_OUTCOME",
+      "paper_count": 37,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_2759041",
+        "pmc_1910542",
+        "pmc_4354260",
+        "pmc_6694367",
+        "pmc_6828959",
+        "pmc_6610391",
+        "pmc_4058599",
+        "pmc_12599755"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Dravet Syndrome",
+      "target": "Clobazam",
+      "relation": "TREATED_WITH",
+      "paper_count": 37,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_6706642",
+        "pmc_6900043",
+        "pmc_6858858",
+        "pmc_6616248",
+        "pmc_12444721",
+        "pmc_7015737",
+        "pmc_12779328",
+        "pmc_3913306"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Dravet Syndrome",
+      "target": "Ketogenic Diet",
+      "relation": "TREATED_WITH",
+      "paper_count": 37,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_12768112",
+        "pmc_6658850",
+        "pmc_6858858",
+        "pmc_12670821",
+        "pmc_2676569",
+        "pmc_6929011",
+        "pmc_6610384",
+        "pmc_7281909"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Lennox-Gastaut Syndrome",
+      "target": "Lamotrigine",
+      "relation": "TREATED_WITH",
+      "paper_count": 35,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_2740006",
+        "pmc_6706642",
+        "pmc_6616248",
+        "pmc_2566553",
+        "pmc_1737219",
+        "pmc_7479698",
+        "pmc_2646636",
+        "pmc_3095965"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Refractory Status Epilepticus",
+      "target": "Phenytoin",
+      "relation": "TREATED_WITH",
+      "paper_count": 35,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_2617750",
+        "pmc_2885610",
+        "pmc_1738579",
+        "pmc_11813736",
+        "pmc_6706647",
+        "pmc_1765558",
+        "pmc_4001216",
+        "pmc_1117894"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tonic-Clonic Seizures",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 34,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_6931289",
+        "pmc_1074044",
+        "pmc_1049808",
+        "pmc_4166360",
+        "pmc_4173910",
+        "pmc_1737198",
+        "pmc_1738790",
+        "pmc_12599755"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Epileptic Seizures",
+      "target": "Carbamazepine",
+      "relation": "TREATED_WITH",
+      "paper_count": 34,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_6515643",
+        "pmc_4307363",
+        "pmc_2730009",
+        "pmc_7667441",
+        "pmc_143552",
+        "pmc_2562787",
+        "pmc_4280904",
+        "pmc_12533710"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Antiseizure",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 34,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_12768112",
+        "pmc_6635472",
+        "pmc_470764",
+        "pmc_12547185",
+        "pmc_12698180",
+        "pmc_12517653",
+        "pmc_6694367",
+        "pmc_7281909"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "SLC2A1",
+      "target": "Ketogenic Diet",
+      "relation": "GENE_DRUG_ASSOC",
+      "paper_count": 34,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_6504322",
+        "pmc_6709387",
+        "pmc_6658850",
+        "pmc_6858858",
+        "pmc_7078900",
+        "pmc_6698688",
+        "pmc_7281909",
+        "pmc_12496523"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Status Epilepticus",
+      "target": "Vigabatrin",
+      "relation": "TREATED_WITH",
+      "paper_count": 34,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_137548",
+        "pmc_2759041",
+        "pmc_485518",
+        "pmc_1941909",
+        "pmc_4019562",
+        "pmc_4028380",
+        "pmc_7137370",
+        "pmc_1941913"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Clobazam",
+      "target": "Seizure Freedom",
+      "relation": "TREATMENT_OUTCOME",
+      "paper_count": 33,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_12706816",
+        "pmc_6658850",
+        "pmc_11701273",
+        "pmc_6677914",
+        "pmc_4241191",
+        "pmc_12641809",
+        "pmc_11703367",
+        "pmc_12477877"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Dravet Syndrome",
+      "target": "Carbamazepine",
+      "relation": "TREATED_WITH",
+      "paper_count": 32,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_6658850",
+        "pmc_1867088",
+        "pmc_2265812",
+        "pmc_7479698",
+        "pmc_2492927",
+        "pmc_2660205",
+        "pmc_2696870",
+        "pmc_6706917"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Febrile Seizures",
+      "target": "KCNQ2",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 31,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_531663",
+        "pmc_6849233",
+        "pmc_6658850",
+        "pmc_12779327",
+        "pmc_1737313",
+        "pmc_12653769",
+        "pmc_8873557",
+        "pmc_3181863"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Dravet Syndrome",
+      "target": "Phenytoin",
+      "relation": "TREATED_WITH",
+      "paper_count": 31,
+      "confidence": 0.75,
+      "supporting_papers": [
+        "pmc_6658850",
+        "pmc_2384156",
+        "pmc_1867088",
+        "pmc_6804258",
+        "pmc_7479698",
+        "pmc_2492927",
+        "pmc_1797888",
+        "pmc_2660205"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "POLG",
+      "target": "Valproate",
+      "relation": "GENE_DRUG_ASSOC",
+      "paper_count": 30,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_6668504",
+        "pmc_6658850",
+        "pmc_2600593",
+        "pmc_6698688",
+        "pmc_4146710",
+        "pmc_6982635",
+        "pmc_4550036",
+        "pmc_2644642"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tuberous Sclerosis Complex",
+      "target": "Seizure Freedom",
+      "relation": "HAS_OUTCOME",
+      "paper_count": 30,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12481185",
+        "pmc_6788437",
+        "pmc_3065368",
+        "pmc_12494630",
+        "pmc_2676569",
+        "pmc_6555868",
+        "pmc_6901556",
+        "pmc_12447324"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Dravet Syndrome",
+      "target": "KCNQ2",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 29,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12839103",
+        "pmc_6658850",
+        "pmc_6858858",
+        "pmc_12779327",
+        "pmc_3181863",
+        "pmc_1797888",
+        "pmc_12104578_pmid_40464908",
+        "pmc_2696870"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Febrile Seizures",
+      "target": "Carbamazepine",
+      "relation": "TREATED_WITH",
+      "paper_count": 28,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_4077686",
+        "pmc_6658850",
+        "pmc_4184546",
+        "pmc_2764413",
+        "pmc_1718261",
+        "pmc_6741662",
+        "pmc_2492927",
+        "pmc_1718674"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Lennox-Gastaut Syndrome",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 27,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_2740006",
+        "pmc_6803684",
+        "pmc_6706642",
+        "pmc_6616248",
+        "pmc_6862620",
+        "pmc_7479698",
+        "pmc_12447324",
+        "pmc_12541665"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Antiseizure",
+      "target": "Carbamazepine",
+      "relation": "TREATED_WITH",
+      "paper_count": 27,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12768112",
+        "pmc_470764",
+        "pmc_12778868",
+        "pmc_12547185",
+        "pmc_12641818",
+        "pmc_11609837",
+        "pmc_6694367",
+        "pmc_7281909"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Antiseizure",
+      "target": "Phenytoin",
+      "relation": "TREATED_WITH",
+      "paper_count": 27,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_470764",
+        "pmc_151020",
+        "pmc_12778868",
+        "pmc_12547185",
+        "pmc_12698180",
+        "pmc_12517653",
+        "pmc_6694367",
+        "pmc_7281909"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "TSC1",
+      "target": "Everolimus",
+      "relation": "GENE_DRUG_ASSOC",
+      "paper_count": 27,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12520851",
+        "pmc_6592065",
+        "pmc_6558978",
+        "pmc_12470099",
+        "pmc_8015558",
+        "pmc_6778095",
+        "pmc_12447324",
+        "pmc_2886330"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tuberous Sclerosis Complex",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 26,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_6803684",
+        "pmc_4135273",
+        "pmc_6555868",
+        "pmc_1719022",
+        "pmc_12447324",
+        "pmc_3100715",
+        "pmc_12731201",
+        "pmc_3072696"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Electrographic Seizure",
+      "target": "Phenytoin",
+      "relation": "DIAGNOSTIC_GUIDES_TX",
+      "paper_count": 26,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_4189096",
+        "pmc_7462087",
+        "pmc_6982635",
+        "pmc_4106759",
+        "pmc_3926348",
+        "pmc_4186423",
+        "pmc_2811985",
+        "pmc_4338003"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Epileptic Seizures",
+      "target": "Ketogenic Diet",
+      "relation": "TREATED_WITH",
+      "paper_count": 26,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_6709387",
+        "pmc_6894132",
+        "pmc_2730009",
+        "pmc_5328585",
+        "pmc_12670821",
+        "pmc_6706647",
+        "pmc_6929011",
+        "pmc_6781615"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Absence Seizures",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 26,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12813460",
+        "pmc_2668107",
+        "pmc_143552",
+        "pmc_7118054",
+        "pmc_6729205",
+        "pmc_6740512",
+        "pmc_12656057",
+        "pmc_4897577"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "SCN1A",
+      "target": "Phenytoin",
+      "relation": "GENE_DRUG_ASSOC",
+      "paper_count": 25,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_2767285",
+        "pmc_6658850",
+        "pmc_12514371",
+        "pmc_11741965",
+        "pmc_12697613",
+        "pmc_1852745",
+        "pmc_12651821",
+        "pmc_6698688"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "TSC2",
+      "target": "Everolimus",
+      "relation": "GENE_DRUG_ASSOC",
+      "paper_count": 25,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12520851",
+        "pmc_6592065",
+        "pmc_6558978",
+        "pmc_4312527",
+        "pmc_8015558",
+        "pmc_6778095",
+        "pmc_12447324",
+        "pmc_4223570"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Febrile Seizures",
+      "target": "Phenytoin",
+      "relation": "TREATED_WITH",
+      "paper_count": 25,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12672406",
+        "pmc_2827310",
+        "pmc_2764413",
+        "pmc_1736203",
+        "pmc_12557838",
+        "pmc_2492927",
+        "pmc_4058896",
+        "pmc_1736206"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tonic-Clonic Seizures",
+      "target": "Carbamazepine",
+      "relation": "TREATED_WITH",
+      "paper_count": 24,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_1736216",
+        "pmc_1074044",
+        "pmc_529354",
+        "pmc_12548831",
+        "pmc_1723502",
+        "pmc_4166360",
+        "pmc_1014871",
+        "pmc_1738790"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "GLUT1 Deficiency Syndrome",
+      "target": "Ketogenic Diet",
+      "relation": "TREATED_WITH",
+      "paper_count": 24,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_6709387",
+        "pmc_7049795",
+        "pmc_6938789",
+        "pmc_12630170",
+        "pmc_7389428",
+        "pmc_7078900",
+        "pmc_12496523",
+        "pmc_12747689"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Refractory Status Epilepticus",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 24,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12813943",
+        "pmc_1738579",
+        "pmc_4001216",
+        "pmc_12620260",
+        "pmc_4341418",
+        "pmc_2946960",
+        "pmc_7082129",
+        "pmc_3926348"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tonic-Clonic Seizures",
+      "target": "Phenytoin",
+      "relation": "TREATED_WITH",
+      "paper_count": 23,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12592108",
+        "pmc_1074044",
+        "pmc_529354",
+        "pmc_1073073",
+        "pmc_1738790",
+        "pmc_2696870",
+        "pmc_12515256",
+        "pmc_12554713"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Myoclonic Seizures",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 22,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_2668107",
+        "pmc_6801174",
+        "pmc_12656057",
+        "pmc_2654531",
+        "pmc_2532866",
+        "pmc_3954875",
+        "pmc_6710234",
+        "pmc_6871179"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Dravet Syndrome",
+      "target": "Fenfluramine",
+      "relation": "TREATED_WITH",
+      "paper_count": 22,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12768112",
+        "pmc_12514371",
+        "pmc_6858858",
+        "pmc_12677017",
+        "pmc_12779334",
+        "pmc_7118054",
+        "pmc_12779328",
+        "pmc_12653090"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "SCN1A",
+      "target": "Valproate",
+      "relation": "GENE_DRUG_ASSOC",
+      "paper_count": 22,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_2767285",
+        "pmc_6658850",
+        "pmc_6803684",
+        "pmc_12779321",
+        "pmc_6616248",
+        "pmc_6698688",
+        "pmc_12447324",
+        "pmc_7112984"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "SCN1A",
+      "target": "Lamotrigine",
+      "relation": "GENE_DRUG_ASSOC",
+      "paper_count": 21,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_6658850",
+        "pmc_6616248",
+        "pmc_12716289",
+        "pmc_6698688",
+        "pmc_12460136",
+        "pmc_1797888",
+        "pmc_6889285",
+        "pmc_6625088"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tuberous Sclerosis Complex",
+      "target": "Carbamazepine",
+      "relation": "TREATED_WITH",
+      "paper_count": 21,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_1511435",
+        "pmc_6771448",
+        "pmc_1737219",
+        "pmc_1792095",
+        "pmc_6555868",
+        "pmc_1719022",
+        "pmc_12546255",
+        "pmc_1738461"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Lennox-Gastaut Syndrome",
+      "target": "Carbamazepine",
+      "relation": "TREATED_WITH",
+      "paper_count": 20,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_2265812",
+        "pmc_6741662",
+        "pmc_12541665",
+        "pmc_3095965",
+        "pmc_2696870",
+        "pmc_1293899",
+        "pmc_1793487",
+        "pmc_486867"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tonic-Clonic Seizures",
+      "target": "Lamotrigine",
+      "relation": "TREATED_WITH",
+      "paper_count": 20,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_4117185",
+        "pmc_1074044",
+        "pmc_4173910",
+        "pmc_12599755",
+        "pmc_2696870",
+        "pmc_2042770",
+        "pmc_1295411",
+        "pmc_2656323"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Dravet Syndrome",
+      "target": "Seizure Freedom",
+      "relation": "HAS_OUTCOME",
+      "paper_count": 20,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_6658850",
+        "pmc_12677017",
+        "pmc_12447324",
+        "pmc_7869634",
+        "pmc_7052829",
+        "pmc_12623555",
+        "pmc_2526377",
+        "pmc_6864569"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Febrile Seizures",
+      "target": "SCN8A",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 20,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_6658850",
+        "pmc_1988852",
+        "pmc_12653769",
+        "pmc_6603176",
+        "pmc_4298829",
+        "pmc_1852436",
+        "pmc_4124819",
+        "pmc_4077284"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Epileptic Seizures",
+      "target": "Phenytoin",
+      "relation": "TREATED_WITH",
+      "paper_count": 19,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_4307954",
+        "pmc_4307363",
+        "pmc_2730009",
+        "pmc_143552",
+        "pmc_4293019",
+        "pmc_6657385",
+        "pmc_6862182",
+        "pmc_529249"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Antiseizure",
+      "target": "Lamotrigine",
+      "relation": "TREATED_WITH",
+      "paper_count": 19,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12504911",
+        "pmc_12547185",
+        "pmc_12641818",
+        "pmc_12517653",
+        "pmc_11609837",
+        "pmc_12647196",
+        "pmc_12705411",
+        "pmc_6677914"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Febrile Seizures",
+      "target": "Lamotrigine",
+      "relation": "TREATED_WITH",
+      "paper_count": 19,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_2764413",
+        "pmc_6746890",
+        "pmc_4205182",
+        "pmc_1718261",
+        "pmc_12158165_pmid_40994713",
+        "pmc_1743107",
+        "pmc_2924161",
+        "pmc_6913308"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "GLUT1 Deficiency Syndrome",
+      "target": "SLC2A1",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 19,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_6709387",
+        "pmc_6512754",
+        "pmc_4376124",
+        "pmc_2423257",
+        "pmc_12496523",
+        "pmc_12747689",
+        "pmc_12479332",
+        "pmc_4229412"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tuberous Sclerosis Complex",
+      "target": "Ketogenic Diet",
+      "relation": "TREATED_WITH",
+      "paper_count": 19,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_3065368",
+        "pmc_4135273",
+        "pmc_2676569",
+        "pmc_4312527",
+        "pmc_6828959",
+        "pmc_7056920",
+        "pmc_4063533",
+        "pmc_4241191"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Lennox-Gastaut Syndrome",
+      "target": "Clobazam",
+      "relation": "TREATED_WITH",
+      "paper_count": 17,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12477877",
+        "pmc_2696870",
+        "pmc_6895797",
+        "pmc_6616248",
+        "pmc_4303987",
+        "pmc_7052834",
+        "pmc_12701652",
+        "pmc_7049808"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Antiseizure Medications",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 17,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12813943",
+        "pmc_12450160",
+        "pmc_12599755",
+        "pmc_12602656",
+        "pmc_12591386",
+        "pmc_12491271",
+        "pmc_12515256",
+        "pmc_12547185"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "KCNQ2",
+      "target": "Carbamazepine",
+      "relation": "GENE_DRUG_ASSOC",
+      "paper_count": 17,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_531663",
+        "pmc_1574129",
+        "pmc_3929196",
+        "pmc_6658850",
+        "pmc_1820748",
+        "pmc_12479891",
+        "pmc_6698688",
+        "pmc_4271583"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Refractory Status Epilepticus",
+      "target": "Ketogenic Diet",
+      "relation": "TREATED_WITH",
+      "paper_count": 17,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_6560512",
+        "pmc_12753963",
+        "pmc_7223986",
+        "pmc_12497667",
+        "pmc_7049803",
+        "pmc_3945660",
+        "pmc_4308031",
+        "pmc_2769009"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Ketogenic Diet",
+      "target": "50% Seizure Reduction",
+      "relation": "TREATMENT_OUTCOME",
+      "paper_count": 17,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12768112",
+        "pmc_3951260",
+        "pmc_12775990",
+        "pmc_4189642",
+        "pmc_6883945",
+        "pmc_6499767",
+        "pmc_6858858",
+        "pmc_6743206"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Lennox-Gastaut Syndrome",
+      "target": "Vigabatrin",
+      "relation": "TREATED_WITH",
+      "paper_count": 16,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_1011415",
+        "pmc_2740006",
+        "pmc_1717195",
+        "pmc_6803684",
+        "pmc_2696870",
+        "pmc_2532866",
+        "pmc_1073883",
+        "pmc_6706642"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tonic-Clonic Seizure",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 16,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_6884442",
+        "pmc_1765559",
+        "pmc_488496",
+        "pmc_1014914",
+        "pmc_4462263",
+        "pmc_6974823",
+        "pmc_6824109",
+        "pmc_1793487"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "SCN1A",
+      "target": "Ketogenic Diet",
+      "relation": "GENE_DRUG_ASSOC",
+      "paper_count": 16,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_3996127",
+        "pmc_2745418",
+        "pmc_4189642",
+        "pmc_6635472",
+        "pmc_6658850",
+        "pmc_4352574",
+        "pmc_1940242",
+        "pmc_7112984"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Status Epilepticus",
+      "target": "Stiripentol",
+      "relation": "TREATED_WITH",
+      "paper_count": 16,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12736221",
+        "pmc_3913306",
+        "pmc_12514371",
+        "pmc_2754329",
+        "pmc_12661285",
+        "pmc_12779334",
+        "pmc_7052834",
+        "pmc_1755892"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Focal Seizures",
+      "target": "Phenytoin",
+      "relation": "TREATED_WITH",
+      "paper_count": 16,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12573446",
+        "pmc_2797492",
+        "pmc_2805652",
+        "pmc_6878841",
+        "pmc_1743107",
+        "pmc_6864568",
+        "pmc_6635223",
+        "pmc_3986281"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Antiseizure Medication",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 16,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_7001112",
+        "pmc_12599755",
+        "pmc_12717438",
+        "pmc_12813460",
+        "pmc_12662108",
+        "pmc_12502381",
+        "pmc_12547185",
+        "pmc_12517653"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Neonatal Seizures",
+      "target": "SCN1A",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 16,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_4834292",
+        "pmc_4126888",
+        "pmc_12839103",
+        "pmc_12785891",
+        "pmc_6658850",
+        "pmc_3996114",
+        "pmc_12479891",
+        "pmc_12618216"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Refractory Status Epilepticus",
+      "target": "Electrographic Seizure",
+      "relation": "DIAGNOSED_BY",
+      "paper_count": 16,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_3929199",
+        "pmc_6982635",
+        "pmc_12598665",
+        "pmc_4110742",
+        "pmc_12497667",
+        "pmc_2946960",
+        "pmc_3999716",
+        "pmc_6921236"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Epileptic Seizures",
+      "target": "Lamotrigine",
+      "relation": "TREATED_WITH",
+      "paper_count": 16,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_4293019",
+        "pmc_6515643",
+        "pmc_12599755",
+        "pmc_2807662",
+        "pmc_4307954",
+        "pmc_143552",
+        "pmc_2854982",
+        "pmc_6797052"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Lennox-Gastaut Syndrome",
+      "target": "Ketogenic Diet",
+      "relation": "TREATED_WITH",
+      "paper_count": 16,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_4221309",
+        "pmc_6883945",
+        "pmc_12579391",
+        "pmc_2649682",
+        "pmc_12670821",
+        "pmc_2676569",
+        "pmc_4241191",
+        "pmc_1718017"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Lennox-Gastaut Syndrome",
+      "target": "SCN1A",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 16,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_2745418",
+        "pmc_4120385",
+        "pmc_6713248",
+        "pmc_4707667",
+        "pmc_2754324",
+        "pmc_6803684",
+        "pmc_6616248",
+        "pmc_2265812"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Febrile Seizures",
+      "target": "Clobazam",
+      "relation": "TREATED_WITH",
+      "paper_count": 16,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_7192276",
+        "pmc_2127609",
+        "pmc_6952031",
+        "pmc_6856628",
+        "pmc_1852399",
+        "pmc_6900043",
+        "pmc_2633044",
+        "pmc_7009479"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Neonatal Seizures",
+      "target": "SCN2A",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 16,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_3996127",
+        "pmc_12839103",
+        "pmc_12785891",
+        "pmc_12705023",
+        "pmc_6753218",
+        "pmc_6610379",
+        "pmc_4189632",
+        "pmc_4729102"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Dravet Syndrome",
+      "target": "Vigabatrin",
+      "relation": "TREATED_WITH",
+      "paper_count": 15,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_4834292",
+        "pmc_4132437",
+        "pmc_2696870",
+        "pmc_2127609",
+        "pmc_12467165",
+        "pmc_3986281",
+        "pmc_12567020",
+        "pmc_320814"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Focal Seizures",
+      "target": "Carbamazepine",
+      "relation": "TREATED_WITH",
+      "paper_count": 15,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12573446",
+        "pmc_12764286",
+        "pmc_12659403",
+        "pmc_6878841",
+        "pmc_1743107",
+        "pmc_6661618",
+        "pmc_3986281",
+        "pmc_12451219"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "SCN2A",
+      "target": "Carbamazepine",
+      "relation": "GENE_DRUG_ASSOC",
+      "paper_count": 15,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_2767285",
+        "pmc_4120385",
+        "pmc_12533132",
+        "pmc_11741965",
+        "pmc_12708636",
+        "pmc_12491271",
+        "pmc_4366142",
+        "pmc_12479891"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Antiseizure Medications",
+      "target": "Lamotrigine",
+      "relation": "TREATED_WITH",
+      "paper_count": 15,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12813943",
+        "pmc_12591386",
+        "pmc_12599755",
+        "pmc_12602656",
+        "pmc_12491271",
+        "pmc_12547185",
+        "pmc_12661259",
+        "pmc_12623587"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Focal Seizures",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 15,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12736221",
+        "pmc_12599755",
+        "pmc_12573446",
+        "pmc_12515583",
+        "pmc_12662112",
+        "pmc_12779321",
+        "pmc_1743107",
+        "pmc_6974823"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "SCN1A",
+      "target": "Seizure Freedom",
+      "relation": "GENE_PREDICTS_OUTCOME",
+      "paper_count": 15,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_7869634",
+        "pmc_12716293",
+        "pmc_6658850",
+        "pmc_6694328",
+        "pmc_12518173",
+        "pmc_6925949",
+        "pmc_6885658",
+        "pmc_6677914"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "SCN1A",
+      "target": "Clobazam",
+      "relation": "GENE_DRUG_ASSOC",
+      "paper_count": 15,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_4132437",
+        "pmc_12533132",
+        "pmc_6900043",
+        "pmc_6616248",
+        "pmc_6889285",
+        "pmc_7112984",
+        "pmc_2633044",
+        "pmc_6698688"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Clonic Seizures",
+      "target": "Valproate",
+      "relation": "TREATED_WITH",
+      "paper_count": 14,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_6708834",
+        "pmc_1757463",
+        "pmc_2668107",
+        "pmc_4120397",
+        "pmc_1738970",
+        "pmc_2752290",
+        "pmc_321197",
+        "pmc_2083313"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tuberous Sclerosis Complex",
+      "target": "Clobazam",
+      "relation": "TREATED_WITH",
+      "paper_count": 14,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_1511138",
+        "pmc_6883945",
+        "pmc_6803684",
+        "pmc_6900043",
+        "pmc_6895797",
+        "pmc_12731201",
+        "pmc_4241191",
+        "pmc_3986281"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Antiseizure Medications",
+      "target": "Carbamazepine",
+      "relation": "TREATED_WITH",
+      "paper_count": 14,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12450160",
+        "pmc_12591386",
+        "pmc_12602656",
+        "pmc_12514366",
+        "pmc_12651606",
+        "pmc_12515256",
+        "pmc_12547185",
+        "pmc_12475458"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Absence Seizures",
+      "target": "Lamotrigine",
+      "relation": "TREATED_WITH",
+      "paper_count": 14,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12813460",
+        "pmc_2532866",
+        "pmc_2668107",
+        "pmc_143552",
+        "pmc_2907950",
+        "pmc_7118054",
+        "pmc_6677914",
+        "pmc_321150"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "KCNQ2",
+      "target": "Phenytoin",
+      "relation": "GENE_DRUG_ASSOC",
+      "paper_count": 14,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_3929196",
+        "pmc_6658850",
+        "pmc_6678645",
+        "pmc_12708636",
+        "pmc_6625149",
+        "pmc_6741647",
+        "pmc_12630783",
+        "pmc_12514364"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Antiseizure",
+      "target": "Ketogenic Diet",
+      "relation": "TREATED_WITH",
+      "paper_count": 14,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12716290",
+        "pmc_12768112",
+        "pmc_6635472",
+        "pmc_12629957",
+        "pmc_6672398",
+        "pmc_6677914",
+        "pmc_2898565",
+        "pmc_12537731"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "SCN1A",
+      "target": "Stiripentol",
+      "relation": "GENE_DRUG_ASSOC",
+      "paper_count": 14,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_3996127",
+        "pmc_4132437",
+        "pmc_6658850",
+        "pmc_6616248",
+        "pmc_6889285",
+        "pmc_7112984",
+        "pmc_2633044",
+        "pmc_12605728"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tuberous Sclerosis Complex",
+      "target": "Phenytoin",
+      "relation": "TREATED_WITH",
+      "paper_count": 13,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_1511138",
+        "pmc_2794316",
+        "pmc_4302143",
+        "pmc_7396474",
+        "pmc_3986281",
+        "pmc_1014404",
+        "pmc_6757954",
+        "pmc_2827167"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Lennox-Gastaut Syndrome",
+      "target": "Seizure Freedom",
+      "relation": "HAS_OUTCOME",
+      "paper_count": 13,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_6788437",
+        "pmc_3065368",
+        "pmc_6826633",
+        "pmc_2532866",
+        "pmc_12518173",
+        "pmc_4303987",
+        "pmc_6887830",
+        "pmc_4028380"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Focal Seizures",
+      "target": "Lamotrigine",
+      "relation": "TREATED_WITH",
+      "paper_count": 13,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12736221",
+        "pmc_12573446",
+        "pmc_6878841",
+        "pmc_6714895",
+        "pmc_1743107",
+        "pmc_3986281",
+        "pmc_12451219",
+        "pmc_6555868"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Antiseizure Medication",
+      "target": "Carbamazepine",
+      "relation": "TREATED_WITH",
+      "paper_count": 13,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_7001112",
+        "pmc_12602949",
+        "pmc_12514366",
+        "pmc_12662108",
+        "pmc_12779323",
+        "pmc_12547185",
+        "pmc_12467979",
+        "pmc_12641818"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Status Epilepticus",
+      "target": "POLG",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 13,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_6982635",
+        "pmc_12753963",
+        "pmc_6668504",
+        "pmc_7049803",
+        "pmc_4067597",
+        "pmc_6777445",
+        "pmc_3002542",
+        "pmc_3926348"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Tonic-Clonic Seizure",
+      "target": "Phenytoin",
+      "relation": "TREATED_WITH",
+      "paper_count": 12,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_6720964",
+        "pmc_1342611",
+        "pmc_3311449",
+        "pmc_1014914",
+        "pmc_6824109",
+        "pmc_1737151",
+        "pmc_2764413",
+        "pmc_4295057"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Myoclonic Seizures",
+      "target": "Lamotrigine",
+      "relation": "TREATED_WITH",
+      "paper_count": 12,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_1114575",
+        "pmc_321155",
+        "pmc_2532866",
+        "pmc_2656314",
+        "pmc_4062308",
+        "pmc_1564882",
+        "pmc_2668107",
+        "pmc_6801174"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Antiseizure",
+      "target": "Clobazam",
+      "relation": "TREATED_WITH",
+      "paper_count": 12,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12716290",
+        "pmc_12528060",
+        "pmc_12555108",
+        "pmc_11609837",
+        "pmc_12417036",
+        "pmc_6888707",
+        "pmc_12779310",
+        "pmc_12611011"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Status Epilepticus",
+      "target": "SCN8A",
+      "relation": "ASSOCIATED_GENE",
+      "paper_count": 12,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12839103",
+        "pmc_6842408",
+        "pmc_4133991",
+        "pmc_7049815",
+        "pmc_4428397",
+        "pmc_7881804",
+        "pmc_1852436",
+        "pmc_6942885"
+      ],
+      "cross_layer": true
+    },
+    {
+      "source": "Valproate",
+      "target": "50% Seizure Reduction",
+      "relation": "TREATMENT_OUTCOME",
+      "paper_count": 12,
+      "confidence": 0.65,
+      "supporting_papers": [
+        "pmc_12716290",
+        "pmc_12768112",
+        "pmc_2654531",
+        "pmc_3002622",
+        "pmc_12550305",
+        "pmc_7137370",
+        "pmc_12497770",
+        "pmc_6979440"
+      ],
+      "cross_layer": true
+    }
+  ],
+  "examples": [
+    {
+      "label": "Dravet therapy",
+      "query": "Dravet syndrome valproate clobazam SCN1A"
+    },
+    {
+      "label": "SCN1A safety",
+      "query": "SCN1A carbamazepine lamotrigine phenytoin"
+    },
+    {
+      "label": "TSC precision medicine",
+      "query": "TSC2 tuberous sclerosis everolimus"
+    },
+    {
+      "label": "Status epilepticus",
+      "query": "status epilepticus treatment outcome"
+    }
+  ]
+}

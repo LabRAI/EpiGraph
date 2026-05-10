@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="EpiGraph is a knowledge graph and benchmark for evidence-intensive reasoning in epilepsy."
+    />
+    <title>EpiGraph | Evidence-Intensive Reasoning in Epilepsy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="EpiGraph home">
+        <span class="brand-mark">E</span>
+        <span>EpiGraph</span>
+      </a>
+      <nav>
+        <a href="#kg">KG Explorer</a>
+        <a href="#benchmark">Benchmark</a>
+        <a href="#quickstart">Quick Start</a>
+        <a href="#downloads">Downloads</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Knowledge graph + benchmark for epilepsy AI</p>
+          <h1 id="hero-title">EpiGraph</h1>
+          <p class="hero-lede">
+            A large-scale epilepsy knowledge graph and five-task benchmark for
+            testing whether language models can reason over clinical evidence,
+            EEG findings, genes, treatments, and outcomes.
+          </p>
+          <div class="hero-actions" aria-label="Project links">
+            <a class="button primary" href="./downloads/README.md">Read the code README</a>
+            <a class="button" href="#kg">Explore the graph</a>
+            <a class="button" href="#quickstart">Run EpiBench</a>
+          </div>
+          <dl class="stats-strip" aria-label="Project statistics">
+            <div>
+              <dt>48,166</dt>
+              <dd>papers</dd>
+            </div>
+            <div>
+              <dt>24,324</dt>
+              <dd>entities</dd>
+            </div>
+            <div>
+              <dt>32,009</dt>
+              <dd>triplets</dd>
+            </div>
+            <div>
+              <dt>5</dt>
+              <dd>tasks</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="overview-section">
+        <div class="section-inner overview-grid">
+          <article>
+            <p class="section-kicker">Why EpiGraph</p>
+            <h2>Epilepsy reasoning is graph-shaped.</h2>
+            <p>
+              Clinical decisions often require moving across multiple evidence
+              layers: syndrome, EEG pattern, genetic mechanism, medication
+              choice, contraindication, and outcome. EpiGraph makes those links
+              explicit, then EpiBench tests whether models can use them.
+            </p>
+          </article>
+          <div class="layer-rail" aria-label="EpiGraph clinical layers">
+            <span data-layer="Syndrome">Syndrome</span>
+            <span data-layer="Phenotype">Phenotype</span>
+            <span data-layer="Gene">Gene</span>
+            <span data-layer="Treatment">Treatment</span>
+            <span data-layer="Outcome">Outcome</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="kg-section" id="kg" aria-labelledby="kg-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">Interactive demo</p>
+            <h2 id="kg-title">Explore a compact EpiGraph subgraph.</h2>
+            <p>
+              Search or click a preset query. Select any node or edge to inspect
+              its layer, relation type, paper count, and supporting paper IDs.
+            </p>
+          </div>
+
+          <div class="kg-workbench">
+            <div class="kg-toolbar">
+              <label class="search-label" for="kg-search">Search graph</label>
+              <input
+                id="kg-search"
+                type="search"
+                autocomplete="off"
+                placeholder="Try SCN1A, Dravet syndrome, valproate, TSC2..."
+              />
+              <div class="query-chips" id="query-chips" aria-label="Example graph queries"></div>
+            </div>
+            <div class="graph-panel">
+              <svg id="kg-svg" role="img" aria-label="Interactive EpiGraph subgraph"></svg>
+              <aside class="inspector" id="inspector" aria-live="polite">
+                <p class="inspector-label">Selected item</p>
+                <h3>Click a node or edge</h3>
+                <p>
+                  The explorer shows how evidence paths connect syndromes,
+                  genes, treatments, and outcomes.
+                </p>
+              </aside>
+            </div>
+            <div class="legend" aria-label="Graph legend">
+              <span><i class="dot syndrome"></i>Syndrome</span>
+              <span><i class="dot phenotype"></i>Phenotype</span>
+              <span><i class="dot gene"></i>Gene</span>
+              <span><i class="dot treatment"></i>Treatment</span>
+              <span><i class="dot outcome"></i>Outcome</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="benchmark-section" id="benchmark" aria-labelledby="benchmark-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">EpiBench</p>
+            <h2 id="benchmark-title">Five tasks for evaluating epilepsy reasoning.</h2>
+            <p>
+              Each task can be run with or without Graph-RAG, making it easy to
+              test your own model against the same clinical inputs.
+            </p>
+          </div>
+          <div class="task-grid">
+            <article class="task-card t1">
+              <span>T1</span>
+              <h3>Clinical Decision Accuracy</h3>
+              <p>MCQ and open-ended epilepsy QA over diagnosis, treatment, outcomes, and reasoning.</p>
+              <code>accuracy · ROUGE-L · Token-F1</code>
+            </article>
+            <article class="task-card t2">
+              <span>T2</span>
+              <h3>Clinical Report Generation</h3>
+              <p>EEG description and patient context to neurologist-style clinical impression.</p>
+              <code>ROUGE-L · report alignment</code>
+            </article>
+            <article class="task-card t3">
+              <span>T3</span>
+              <h3>Biomarker Precision Medicine</h3>
+              <p>Gene variant and phenotype to antiseizure medication selection.</p>
+              <code>Top-1 · Drug Safety</code>
+            </article>
+            <article class="task-card t4">
+              <span>T4</span>
+              <h3>Treatment Recommendation</h3>
+              <p>Guideline-consistent therapy choice under patient-specific constraints.</p>
+              <code>Top-1 · KG Coverage</code>
+            </article>
+            <article class="task-card t5">
+              <span>T5</span>
+              <h3>Deep Research Planning</h3>
+              <p>Literature-grounded research question and feasible study-plan generation.</p>
+              <code>judge score · feasibility</code>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="quickstart-section" id="quickstart" aria-labelledby="quickstart-title">
+        <div class="section-inner quickstart-grid">
+          <div>
+            <p class="section-kicker">Run your model</p>
+            <h2 id="quickstart-title">Clone, install, evaluate.</h2>
+            <p>
+              EpiBench scripts accept local JSON datasets and an OpenRouter-compatible
+              model name. For private Harvard EEG data, use the local JSONL adapter.
+            </p>
+          </div>
+          <div class="terminal" aria-label="Quick start commands">
+            <button id="copy-quickstart" type="button">Copy</button>
+            <pre><code id="quickstart-code">git clone https://github.com/LabRAI/EEG-KG.git
+cd EEG-KG
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+export OPENROUTER_API_KEY="your_key_here"
+
+python tasks/t1_clinical_decision_accuracy.py \
+  --dataset data/epibench/t1/mcq.json \
+  --triplets data/epikg/triplets.json \
+  --model openai/gpt-4o \
+  --mode graph_rag</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="downloads-section" id="downloads" aria-labelledby="downloads-title">
+        <div class="section-inner downloads-grid">
+          <div>
+            <p class="section-kicker">Release plan</p>
+            <h2 id="downloads-title">Code, graph, tasks, and restricted-data adapters.</h2>
+          </div>
+          <div class="download-list">
+            <a href="./downloads/README.md">
+              <strong>Code release</strong>
+              <span>Task scripts, Graph-RAG retriever, metrics, and examples</span>
+            </a>
+            <a href="./downloads/CODE_MANIFEST.md">
+              <strong>Manifest</strong>
+              <span>Paper-to-code mapping for every task and metric</span>
+            </a>
+            <a href="./downloads/t2_harvard_local_schema.jsonl">
+              <strong>Harvard EEG local schema</strong>
+              <span>Private-data adapter format for T2 report generation</span>
+            </a>
+            <a href="./data/demo_graph.json">
+              <strong>Demo graph JSON</strong>
+              <span>Compact KG subset used by this project page</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="citation-section" aria-labelledby="citation-title">
+        <div class="section-inner">
+          <p class="section-kicker">Citation</p>
+          <h2 id="citation-title">Cite EpiGraph</h2>
+          <pre><code>@inproceedings{epigraph2026,
+  title={EpiGraph: A Knowledge Graph and Benchmark for Evidence-Intensive Reasoning in Epilepsy},
+  author={Dai, Yuyang and Chen, Zheng and Pradeepkumar, Jathurshan and others},
+  booktitle={NeurIPS},
+  year={2026}
+}</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>EpiGraph</span>
+      <span>Evidence-intensive reasoning for epilepsy AI</span>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
