@@ -1,116 +1,141 @@
 <div align="center">
 
-# <span style="color:#4F46E5">EpiGraph</span>: Building Generalists for Evidence-Intensive Epilepsy Reasoning in the Wild
+# EpiGraph
 
-**An interactive knowledge graph and plug-and-play benchmark toolkit for evidence-intensive epilepsy reasoning**
+### Building Generalists for Evidence-Intensive Epilepsy Reasoning in the Wild
 
-<img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white">
-<img alt="Graph RAG" src="https://img.shields.io/badge/Graph--RAG-PPR%20%2B%20Paths-7C3AED?style=for-the-badge">
-<img alt="Tasks" src="https://img.shields.io/badge/EpiBench-5%20Tasks-14B8A6?style=for-the-badge">
+**A knowledge-graph-powered benchmark and code release for evaluating whether AI systems can reason across epilepsy literature, EEG findings, genes, treatments, and clinical outcomes.**
+
+<p>
+  <a href="./docs"><img alt="Project Page" src="https://img.shields.io/badge/Project%20Page-Interactive%20KG-4F46E5?style=for-the-badge"></a>
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white">
+  <img alt="Graph RAG" src="https://img.shields.io/badge/Graph--RAG-PPR%20%2B%20Paths-7C3AED?style=for-the-badge">
+  <img alt="EpiBench" src="https://img.shields.io/badge/EpiBench-5%20Tasks-14B8A6?style=for-the-badge">
+  <a href="./LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache--2.0-EAB308?style=for-the-badge"></a>
+</p>
+
+<p>
+  <a href="#why-epigraph">Why EpiGraph</a> ·
+  <a href="#highlights">Highlights</a> ·
+  <a href="#quick-start">Quick Start</a> ·
+  <a href="#epibench-tasks">Tasks</a> ·
+  <a href="#citation">Citation</a>
+</p>
 
 </div>
+
+---
+
+## Why EpiGraph
+
+Modern medical AI is moving from short-form question answering toward **evidence-intensive clinical reasoning**: connecting literature, mechanisms, phenotypes, EEG patterns, genetic biomarkers, treatment choices, safety constraints, and patient outcomes.
+
+Epilepsy is a demanding testbed for this shift. Correct answers often depend on multi-hop evidence: a syndrome may be linked to a gene, the gene to a seizure phenotype, the phenotype to EEG signatures, and the treatment decision to contraindications or guideline evidence. **EpiGraph** makes these links explicit through an epilepsy knowledge graph and evaluates whether generalist models can use that evidence in realistic reasoning tasks.
+
+This repository provides the paper-aligned code release for:
+
+| Component | What it gives you |
+|---|---|
+| **EpiKG** | A lightweight builder for an epilepsy knowledge graph from literature and clinical resources |
+| **Graph-RAG** | Retrieval over graph neighborhoods with PPR ranking and serialized reasoning paths |
+| **EpiBench** | Five benchmark tasks spanning QA, EEG reports, precision medicine, treatment recommendation, and research planning |
+| **Metrics** | Task-specific evaluation utilities aligned with the paper |
+| **Project page** | A GitHub Pages-ready site with an interactive KG explorer and benchmark overview |
+
+---
+
+## Highlights
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3>Interactive knowledge graph</h3>
+      <p>Explore a compact EpiGraph subgraph directly in the browser. Search nodes, inspect evidence paths, and view relation metadata used by Graph-RAG.</p>
+    </td>
+    <td width="50%">
+      <h3>Plug-and-play evaluation</h3>
+      <p>Run the same task scripts with your own model, retriever, prompts, or local data exports. EpiBench is designed for fast model testing and fair ablation.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>Five clinically grounded tasks</h3>
+      <p>Evaluate models on epilepsy diagnosis, EEG impression generation, biomarker-driven medication selection, treatment recommendation, and deep research planning.</p>
+    </td>
+    <td width="50%">
+      <h3>Private-data-aware release</h3>
+      <p>The Harvard EEG task is supported through a local schema adapter, so the evaluation logic is reproducible without redistributing restricted data.</p>
+    </td>
+  </tr>
+</table>
+
+---
+
+## At A Glance
+
+| Signal | Scale in the paper |
+|---|---:|
+| Literature corpus | **48,166** papers |
+| Knowledge graph entities | **24,324** entities |
+| Knowledge graph triplets | **32,009** triplets |
+| Benchmark tasks | **5** tasks |
+| Core setting | Evidence-intensive epilepsy reasoning |
 
 ---
 
 ## Project Page
 
-This repo includes a static GitHub Pages site in [`docs/`](docs/):
+This repo includes a static GitHub Pages site in [`docs/`](./docs/). It contains:
+
+| Page feature | Included |
+|---|---|
+| Responsive hero section | PC, laptop, tablet, and mobile friendly |
+| Interactive KG explorer | Search, presets, clickable nodes, clickable edges, evidence inspector |
+| EpiBench overview | Five task cards with metrics |
+| Quick-start commands | Copy-ready evaluation command |
+| Downloads | README, manifest, T2 schema, demo graph, license |
+
+To publish the page on GitHub:
 
 ```text
-docs/index.html
-docs/styles.css
-docs/app.js
-docs/data/demo_graph.json
-```
-
-To publish it on GitHub, open **Settings → Pages**, choose **Deploy from a branch**, then select:
-
-```text
+Settings -> Pages -> Deploy from a branch
 Branch: main
 Folder: /docs
 ```
 
-The page includes an interactive EpiGraph demo, benchmark task descriptions, and copy-ready evaluation commands.
+GitHub will then serve the page from the repository's Pages URL.
 
 ---
 
-## What This Folder Contains
-
-This is a clean, paper-aligned code bundle for **EpiGraph: Building Generalists for Evidence-Intensive Epilepsy Reasoning in the Wild**.
-
-It includes:
-
-| Area | File | Purpose |
-|---|---|---|
-| Knowledge graph | `epigraph/build_kg.py` | Build a lightweight EPIKG-style graph preview from PMC XML files |
-| Graph retrieval | `epigraph/retrieval.py` | PPR-based graph retrieval and reasoning-path serialization |
-| Metrics | `epigraph/metrics.py` | Accuracy, Top-k, ROUGE-L, Token-F1, BLEU-1, MRR/NDCG, safety and KG coverage |
-| Common utilities | `epigraph/common.py` | JSON IO, OpenRouter-compatible client, normalization helpers |
-| Task 1 | `tasks/t1_clinical_decision_accuracy.py` | Clinical Decision Accuracy: MCQ and open-ended clinical QA |
-| Task 2 | `tasks/t2_clinical_report_generation.py` | Clinical Report Generation from EEG descriptions and patient context |
-| Task 3 | `tasks/t3_biomarker_precision_medicine.py` | Biomarker-driven precision medicine from gene variants to ASMs |
-| Task 4 | `tasks/t4_treatment_recommendation.py` | Treatment recommendation on epilepsy-relevant MedQA/MMLU-style questions |
-| Task 5 | `tasks/t5_deep_research_planning.py` | Deep epilepsy research question and study-plan generation |
-
----
-
-## EpiBench Tasks
-
-<div style="border-left:6px solid #4F46E5;padding:10px 14px;background:#F5F3FF">
-
-**T1 Clinical Decision Accuracy (CDA)**  
-Epilepsy-specific MCQ and open-ended QA covering diagnosis, treatment, outcome, factual recall, and clinical reasoning.
-
-</div>
-
-<div style="border-left:6px solid #0EA5E9;padding:10px 14px;background:#EFF6FF">
-
-**T2 Clinical Report Generation (CRG)**  
-Generate neurologist-style EEG impressions from patient history, EEG text, and computed EEG statistics.  
-The Harvard EEG data cannot be redistributed, so this release provides a local-schema builder and evaluator.
-
-</div>
-
-<div style="border-left:6px solid #10B981;padding:10px 14px;background:#ECFDF5">
-
-**T3 Biomarker-Driven Precision Medicine (BPM)**  
-Select antiseizure medications from genetic variants and phenotypes using CPIC/ILAE-style pharmacogenomic evidence.
-
-</div>
-
-<div style="border-left:6px solid #F97316;padding:10px 14px;background:#FFF7ED">
-
-**T4 Treatment Recommendation (TR)**  
-Recommend guideline-consistent therapies under patient-specific constraints, with drug safety and KG evidence coverage.
-
-</div>
-
-<div style="border-left:6px solid #DB2777;padding:10px 14px;background:#FDF2F8">
-
-**T5 Deep Research Planning (DRP)**  
-Generate clinically meaningful research questions and feasible study plans from epilepsy literature.
-
-</div>
-
----
-
-## Setup
+## Quick Start
 
 ```bash
-cd EpiGraph_code_release
+git clone https://github.com/<your-org>/<your-repo>.git
+cd <your-repo>
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 export OPENROUTER_API_KEY="your_key_here"
 ```
 
-For local models, replace `ChatClient` calls with your local inference wrapper or run an OpenAI-compatible local endpoint.
+Run a Graph-RAG evaluation on Task 1:
+
+```bash
+python tasks/t1_clinical_decision_accuracy.py \
+  --dataset data/epibench/t1/mcq.json \
+  --triplets data/epikg/triplets.json \
+  --model openai/gpt-4o \
+  --mode graph_rag \
+  --out runs/t1_mcq_graph_rag.json
+```
+
+For local models, replace the `ChatClient` implementation in [`epigraph/common.py`](./epigraph/common.py) with your local inference wrapper or point it to an OpenAI-compatible local endpoint.
 
 ---
 
-## Build A Lightweight EPIKG Preview
+## Build A Lightweight EpiKG Preview
 
-The full paper graph is built from 48,166 papers plus clinical resources. This script provides a reproducible preview builder for local PMC XML files:
+The full paper graph is built from 48,166 papers plus clinical resources. This release includes a reproducible preview builder for local PMC XML files:
 
 ```bash
 python -m epigraph.build_kg \
@@ -125,7 +150,7 @@ data/epikg/triplets.json
 data/epikg/paper_metadata.json
 ```
 
-The triplet schema follows the paper:
+Triplets follow the paper-aligned schema:
 
 ```json
 {
@@ -141,7 +166,15 @@ The triplet schema follows the paper:
 
 ---
 
-## Run The Five Tasks
+## EpiBench Tasks
+
+| Task | Name | What it measures | Main metrics |
+|---|---|---|---|
+| **T1** | Clinical Decision Accuracy | Epilepsy-specific MCQ and open-ended clinical QA | Top-1 accuracy, BLEU-1, ROUGE-L, Token-F1 |
+| **T2** | Clinical Report Generation | EEG description and patient context to neurologist-style impression | ROUGE-L, Token-F1, report alignment |
+| **T3** | Biomarker Precision Medicine | Gene variant and phenotype to antiseizure medication selection | Top-1 accuracy, drug safety score |
+| **T4** | Treatment Recommendation | Guideline-consistent therapy choice under patient-specific constraints | Top-1 accuracy, drug safety, KG evidence coverage |
+| **T5** | Deep Research Planning | Literature-grounded research question and feasible study-plan generation | ROUGE-L, Token-F1, LLM-as-judge dimensions |
 
 ### T1 Clinical Decision Accuracy
 
@@ -156,7 +189,7 @@ python tasks/t1_clinical_decision_accuracy.py \
 
 ### T2 Clinical Report Generation
 
-Prepare a private local JSONL from Harvard EEG-derived data:
+The Harvard EEG data used by the paper cannot be redistributed. This release provides a local adapter and evaluator. Prepare a private JSONL export with the following fields:
 
 ```json
 {"patient_history":"...","eeg_description":"...","bandpower":{"delta":0.31},"spike_rate":2.4,"impression":"..."}
@@ -219,39 +252,16 @@ python tasks/t5_deep_research_planning.py eval \
 
 ---
 
-## Metrics Matched To The Paper
-
-| Task | Main metrics |
-|---|---|
-| T1 CDA | MCQ Top-1 Accuracy; open-ended BLEU-1, ROUGE-L, Token-F1, LLM-as-Judge-ready outputs |
-| T2 CRG | ROUGE-L, Token-F1, report alignment / clinical relevance via human or LLM judge |
-| T3 BPM | Top-1 Accuracy, Drug Safety Score |
-| T4 TR | Top-1 Accuracy, Drug Safety Score, KG Evidence Coverage |
-| T5 DRP | ROUGE-L / Token-F1 when expert annotations exist; LLM-as-Judge dimensions for validity, clinical relevance, feasibility, novelty, literature alignment |
-
----
-
-## Notes On Private Or Restricted Data
-
-The paper uses the Harvard EEG database for T2. This dataset is not redistributed here. The provided T2 code intentionally expects a **local JSONL export** and keeps only a small, replaceable schema:
-
-```text
-patient_history
-eeg_description
-bandpower
-spike_rate
-impression
-```
-
-This preserves the evaluation logic while respecting dataset restrictions.
-
----
-
 ## Repository Layout
 
 ```text
 EpiGraph_code_release/
   configs/default.json
+  docs/
+    index.html
+    styles.css
+    app.js
+    data/demo_graph.json
   epigraph/
     build_kg.py
     common.py
@@ -263,9 +273,17 @@ EpiGraph_code_release/
     t3_biomarker_precision_medicine.py
     t4_treatment_recommendation.py
     t5_deep_research_planning.py
-  requirements.txt
+  CODE_MANIFEST.md
+  LICENSE
   README.md
+  requirements.txt
 ```
+
+---
+
+## License
+
+This project is released under the [Apache License 2.0](./LICENSE).
 
 ---
 
@@ -286,6 +304,6 @@ If you use EpiGraph, EpiBench, or this code release, please cite:
 
 <div align="center">
 
-<b style="color:#4F46E5">EpiGraph</b> turns epilepsy literature into structured evidence, then tests whether LLMs can reason with it.
+**EpiGraph turns epilepsy evidence into graph structure, then tests whether generalist AI systems can reason with it.**
 
 </div>

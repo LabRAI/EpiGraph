@@ -562,6 +562,7 @@ code {
 .download-list a:nth-child(2) { border-left-color: var(--teal); }
 .download-list a:nth-child(3) { border-left-color: var(--orange); }
 .download-list a:nth-child(4) { border-left-color: var(--rose); }
+.download-list a:nth-child(5) { border-left-color: var(--violet); }
 
 .download-list strong,
 .download-list span {
