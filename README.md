@@ -12,6 +12,21 @@
 
 ---
 
+## Project Page
+
+This repo includes a static GitHub Pages site in [`docs/`](docs/):
+
+```text
+docs/index.html
+docs/styles.css
+docs/app.js
+docs/data/demo_graph.json
+```
+
+The page includes an interactive EpiGraph demo, benchmark task descriptions, and evaluation commands.
+
+---
+
 ## What This Folder Contains
 
 This is the code bundle for **EpiGraph: A Knowledge Graph and Benchmark for Evidence-Intensive Reasoning in Epilepsy**.
@@ -252,4 +267,3 @@ EpiGraph_code_release/
 <b style="color:#4F46E5">EpiGraph</b> turns epilepsy literature into structured evidence, then tests whether LLMs can reason with it.
 
 </div>
-
