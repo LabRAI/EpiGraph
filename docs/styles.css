@@ -139,6 +139,15 @@ h1 {
   letter-spacing: 0;
 }
 
+.paper-title {
+  max-width: 850px;
+  margin-bottom: 18px;
+  color: #ffffff;
+  font-size: clamp(26px, 5.2vw, 60px);
+  font-weight: 800;
+  line-height: 1.02;
+}
+
 h2 {
   margin-bottom: 16px;
   font-size: clamp(32px, 5vw, 58px);
@@ -574,6 +583,16 @@ footer {
   font-weight: 700;
 }
 
+@media (max-width: 1180px) {
+  .task-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .task-card {
+    min-height: 220px;
+  }
+}
+
 @media (max-width: 980px) {
   nav {
     display: none;
@@ -605,6 +624,15 @@ footer {
     min-height: 88vh;
   }
 
+  .hero-copy {
+    width: min(100% - 28px, 960px);
+  }
+
+  .paper-title {
+    font-size: clamp(25px, 8vw, 38px);
+    line-height: 1.08;
+  }
+
   .stats-strip,
   .task-grid {
     grid-template-columns: 1fr;
@@ -618,8 +646,16 @@ footer {
     min-height: 470px;
   }
 
+  .kg-toolbar,
+  .inspector {
+    padding: 16px;
+  }
+
+  pre {
+    padding: 22px 16px;
+  }
+
   footer {
     display: grid;
   }
 }
-

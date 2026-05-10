@@ -1,8 +1,8 @@
 <div align="center">
 
-# <span style="color:#4F46E5">EpiGraph</span> Code Release
+# <span style="color:#4F46E5">EpiGraph</span>: Building Generalists for Evidence-Intensive Epilepsy Reasoning in the Wild
 
-**A knowledge graph and benchmark toolkit for evidence-intensive reasoning in epilepsy**
+**An interactive knowledge graph and plug-and-play benchmark toolkit for evidence-intensive epilepsy reasoning**
 
 <img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white">
 <img alt="Graph RAG" src="https://img.shields.io/badge/Graph--RAG-PPR%20%2B%20Paths-7C3AED?style=for-the-badge">
@@ -23,13 +23,20 @@ docs/app.js
 docs/data/demo_graph.json
 ```
 
-The page includes an interactive EpiGraph demo, benchmark task descriptions, and evaluation commands.
+To publish it on GitHub, open **Settings → Pages**, choose **Deploy from a branch**, then select:
+
+```text
+Branch: main
+Folder: /docs
+```
+
+The page includes an interactive EpiGraph demo, benchmark task descriptions, and copy-ready evaluation commands.
 
 ---
 
 ## What This Folder Contains
 
-This is the code bundle for **EpiGraph: A Knowledge Graph and Benchmark for Evidence-Intensive Reasoning in Epilepsy**.
+This is a clean, paper-aligned code bundle for **EpiGraph: Building Generalists for Evidence-Intensive Epilepsy Reasoning in the Wild**.
 
 It includes:
 
@@ -258,6 +265,21 @@ EpiGraph_code_release/
     t5_deep_research_planning.py
   requirements.txt
   README.md
+```
+
+---
+
+## Citation
+
+If you use EpiGraph, EpiBench, or this code release, please cite:
+
+```bibtex
+@inproceedings{epigraph2026,
+  title={EpiGraph: Building Generalists for Evidence-Intensive Epilepsy Reasoning in the Wild},
+  author={Dai, Yuyang and Chen, Zheng and Pradeepkumar, Jathurshan and Matsubara, Yasuko and Sun, Jimeng and Sakurai, Yasushi and Dong, Yushun},
+  booktitle={NeurIPS},
+  year={2026}
+}
 ```
 
 ---
