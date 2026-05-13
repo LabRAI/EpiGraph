@@ -150,7 +150,7 @@ python tasks/t1_clinical_decision_accuracy.py \
   --out runs/t1_mcq_graph_rag.json
 ```
 
-For local models, replace the `ChatClient` implementation in [`epigraph/common.py`](./epigraph/common.py) with your local inference wrapper or point it to an OpenAI-compatible local endpoint.
+For local models, replace the `ChatClient` implementation in [`epigraph/common.py`](../EpiGraph_code_release/epigraph/common.py) with your local inference wrapper or point it to an OpenAI-compatible local endpoint.
 
 ---
 
@@ -304,7 +304,7 @@ EpiGraph_code_release/
 
 ## License
 
-This project is released under the [Apache License 2.0](./LICENSE).
+This project is released under the [Apache License 2.0](../EpiGraph_code_release/LICENSE).
 
 ---
 
@@ -313,10 +313,13 @@ This project is released under the [Apache License 2.0](./LICENSE).
 If you use EpiGraph, EpiBench, or this code release, please cite:
 
 ```bibtex
-@inproceedings{epigraph2026,
+@article{dai2026epigraph,
   title={EpiGraph: Building Generalists for Evidence-Intensive Epilepsy Reasoning in the Wild},
   author={Dai, Yuyang and Chen, Zheng and Pradeepkumar, Jathurshan and Matsubara, Yasuko and Sun, Jimeng and Sakurai, Yasushi and Dong, Yushun},
-  booktitle={NeurIPS},
+  journal={arXiv preprint arXiv:2605.09505},
+  eprint={2605.09505},
+  archivePrefix={arXiv},
+  url={https://arxiv.org/abs/2605.09505},
   year={2026}
 }
 ```

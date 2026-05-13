@@ -24,8 +24,7 @@ async function loadGraph() {
   renderChips();
   renderGraph();
   document.getElementById("kg-search").addEventListener("input", (event) => {
-    state.search = event.target.value.trim().toLowerCase();
-    updateHighlighting();
+    setSearchQuery(event.target.value, false);
   });
   window.addEventListener("resize", () => renderGraph());
 }
@@ -40,11 +39,68 @@ function renderChips() {
     button.addEventListener("click", () => {
       const input = document.getElementById("kg-search");
       input.value = item.query;
-      state.search = item.query.toLowerCase();
-      updateHighlighting();
+      setSearchQuery(item.query, true);
     });
     holder.appendChild(button);
   });
+}
+
+function setSearchQuery(query, autoSelect) {
+  state.search = query.trim().toLowerCase();
+  if (!state.search) {
+    state.selected = null;
+    resetInspector();
+    updateHighlighting();
+    return;
+  }
+
+  if (autoSelect) {
+    const match = findBestNodeForQuery(state.search);
+    if (match) {
+      selectNode(match);
+      return;
+    }
+  } else {
+    state.selected = null;
+    resetInspector();
+  }
+  updateHighlighting();
+}
+
+function resetInspector() {
+  document.getElementById("inspector").innerHTML = `
+    <p class="inspector-label">Selected item</p>
+    <h3>Click a node or edge</h3>
+    <p>
+      The explorer shows how evidence paths connect syndromes,
+      genes, treatments, and outcomes.
+    </p>
+  `;
+}
+
+function findBestNodeForQuery(query) {
+  const terms = query.split(/\s+/).filter(Boolean);
+  if (!terms.length) return null;
+
+  let best = null;
+  let bestScore = 0;
+  const queryPhrase = terms.join(" ");
+  state.graph.nodes.forEach((node) => {
+    const id = node.id.toLowerCase();
+    const label = node.label.toLowerCase();
+    let score = 0;
+    if (queryPhrase.includes(label) || queryPhrase.includes(id)) score += 20;
+    terms.forEach((term, index) => {
+      if (id === term || label === term) score += 12 - index;
+      else if (id.startsWith(term) || label.startsWith(term)) score += 6 - Math.min(index, 4);
+      else if (id.includes(term) || label.includes(term)) score += 3 - Math.min(index, 2);
+    });
+    if (score > bestScore || (score === bestScore && node.degree > (best?.degree || 0))) {
+      best = node;
+      bestScore = score;
+    }
+  });
+  return bestScore > 0 ? best : null;
 }
 
 function renderGraph() {
@@ -153,16 +209,17 @@ function updateHighlighting() {
   const terms = state.search.split(/\s+/).filter(Boolean);
   const selectedNode = state.selected?.type === "node" ? state.selected.item.id : null;
   const selectedEdge = state.selected?.type === "edge" ? state.selected.item : null;
+  const connectedToSelected = (id) =>
+    selectedNode &&
+    state.graph.links.some((link) => (link.source === selectedNode && link.target === id) || (link.target === selectedNode && link.source === id));
 
   document.querySelectorAll(".node").forEach((nodeEl) => {
     const id = nodeEl.dataset.id;
     const text = id.toLowerCase();
     const matchesSearch = terms.length === 0 || terms.some((term) => text.includes(term));
-    const matchesSelected =
-      !selectedNode ||
-      id === selectedNode ||
-      state.graph.links.some((link) => (link.source === selectedNode && link.target === id) || (link.target === selectedNode && link.source === id));
-    nodeEl.classList.toggle("dimmed", !(matchesSearch && matchesSelected));
+    const matchesSelected = !selectedNode || id === selectedNode || connectedToSelected(id);
+    const shouldShow = selectedNode ? matchesSelected || matchesSearch : matchesSearch;
+    nodeEl.classList.toggle("dimmed", !shouldShow);
   });
 
   document.querySelectorAll(".edge-line").forEach((edgeEl) => {
@@ -173,7 +230,8 @@ function updateHighlighting() {
     const matchesSearch = terms.length === 0 || terms.some((term) => edgeText.includes(term));
     const matchesSelected = !selectedNode || source === selectedNode || target === selectedNode;
     const isActive = selectedEdge && selectedEdge.source === source && selectedEdge.target === target && selectedEdge.relation === rel;
-    edgeEl.classList.toggle("dimmed", !(matchesSearch && matchesSelected));
+    const shouldShow = selectedNode ? matchesSelected || matchesSearch : matchesSearch;
+    edgeEl.classList.toggle("dimmed", !shouldShow);
     edgeEl.classList.toggle("active", Boolean(isActive));
   });
 }
@@ -275,4 +333,3 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 }
-

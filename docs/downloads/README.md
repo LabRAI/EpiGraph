@@ -7,11 +7,11 @@
 **A knowledge-graph-powered benchmark and code release for evaluating whether AI systems can reason across epilepsy literature, EEG findings, genes, treatments, and clinical outcomes.**
 
 <p>
-  <a href="./docs"><img alt="Project Page" src="https://img.shields.io/badge/Project%20Page-Interactive%20KG-4F46E5?style=for-the-badge"></a>
+  <a href="../"><img alt="Project Page" src="https://img.shields.io/badge/Project%20Page-Interactive%20KG-4F46E5?style=for-the-badge"></a>
   <img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white">
   <img alt="Graph RAG" src="https://img.shields.io/badge/Graph--RAG-PPR%20%2B%20Paths-7C3AED?style=for-the-badge">
   <img alt="EpiBench" src="https://img.shields.io/badge/EpiBench-5%20Tasks-14B8A6?style=for-the-badge">
-  <a href="./LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache--2.0-EAB308?style=for-the-badge"></a>
+  <a href="./LICENSE"><img alt="License" src="https://img.shields.io/github/license/LabRAI/EpiGraph?style=for-the-badge&color=0F766E"></a>
 </p>
 
 <p>
@@ -19,12 +19,17 @@
   <a href="#highlights">Highlights</a> ·
   <a href="#quick-start">Quick Start</a> ·
   <a href="#epibench-tasks">Tasks</a> ·
-  <a href="#citation">Citation</a>
+  <a href="#citation">Citation</a> ·
+  <a href="#repository-metrics">Metrics</a>
 </p>
 
 </div>
 
 ---
+
+<p align="center">
+  <img src="../assets/epigraph_overview.png" alt="EpiGraph overview" width="95%">
+</p>
 
 ## Why EpiGraph
 
@@ -68,6 +73,22 @@ This repository provides the paper-aligned code release for:
     </td>
   </tr>
 </table>
+
+---
+
+## Visual Tour
+
+<p align="center">
+  <img src="../assets/epikg_schema.png" alt="EpiKG knowledge graph schema" width="95%">
+</p>
+
+**EpiKG** organizes epilepsy evidence into connected clinical layers, linking syndromes, phenotypes, genes, treatments, and outcomes through evidence-grounded triplets.
+
+<p align="center">
+  <img src="../assets/epibench_overview.png" alt="EpiBench benchmark overview" width="95%">
+</p>
+
+**EpiBench** turns the graph and clinical inputs into five model-facing tasks, making it easy to compare standard prompting, retrieval, and Graph-RAG settings.
 
 ---
 
@@ -292,13 +313,32 @@ This project is released under the [Apache License 2.0](./LICENSE).
 If you use EpiGraph, EpiBench, or this code release, please cite:
 
 ```bibtex
-@inproceedings{epigraph2026,
+@article{dai2026epigraph,
   title={EpiGraph: Building Generalists for Evidence-Intensive Epilepsy Reasoning in the Wild},
   author={Dai, Yuyang and Chen, Zheng and Pradeepkumar, Jathurshan and Matsubara, Yasuko and Sun, Jimeng and Sakurai, Yasushi and Dong, Yushun},
-  booktitle={NeurIPS},
+  journal={arXiv preprint arXiv:2605.09505},
+  eprint={2605.09505},
+  archivePrefix={arXiv},
+  url={https://arxiv.org/abs/2605.09505},
   year={2026}
 }
 ```
+
+---
+
+## Repository Metrics
+
+<div align="center">
+
+<a href="https://github.com/LabRAI/EpiGraph/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/LabRAI/EpiGraph?style=for-the-badge&logo=github&color=EAB308"></a>
+<a href="https://github.com/LabRAI/EpiGraph/network/members"><img alt="GitHub forks" src="https://img.shields.io/github/forks/LabRAI/EpiGraph?style=for-the-badge&logo=github&color=14B8A6"></a>
+<a href="https://github.com/LabRAI/EpiGraph/watchers"><img alt="GitHub watchers" src="https://img.shields.io/github/watchers/LabRAI/EpiGraph?style=for-the-badge&logo=github&color=7C3AED"></a>
+<a href="https://github.com/LabRAI/EpiGraph/releases"><img alt="GitHub downloads" src="https://img.shields.io/github/downloads/LabRAI/EpiGraph/total?style=for-the-badge&logo=github&color=0EA5E9"></a>
+<a href="https://github.com/LabRAI/EpiGraph/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/LabRAI/EpiGraph?style=for-the-badge&logo=github&color=EF4444"></a>
+<img alt="Last commit" src="https://img.shields.io/github/last-commit/LabRAI/EpiGraph?style=for-the-badge&color=64748B">
+<img alt="Repo size" src="https://img.shields.io/github/repo-size/LabRAI/EpiGraph?style=for-the-badge&color=64748B">
+
+</div>
 
 ---
 
