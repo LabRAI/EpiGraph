@@ -7,19 +7,30 @@
 **A knowledge-graph-powered benchmark and code release for evaluating whether AI systems can reason across epilepsy literature, EEG findings, genes, treatments, and clinical outcomes.**
 
 <p>
-  <a href="./docs"><img alt="Project Page" src="https://img.shields.io/badge/Project%20Page-Interactive%20KG-4F46E5?style=for-the-badge"></a>
-  <img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white">
-  <img alt="Graph RAG" src="https://img.shields.io/badge/Graph--RAG-PPR%20%2B%20Paths-7C3AED?style=for-the-badge">
-  <img alt="EpiBench" src="https://img.shields.io/badge/EpiBench-5%20Tasks-14B8A6?style=for-the-badge">
-  <a href="./LICENSE"><img alt="License" src="https://img.shields.io/github/license/LabRAI/EpiGraph?style=for-the-badge&color=0F766E"></a>
+  <a href="./docs"><img alt="Project Page" src="https://img.shields.io/badge/Project%20Page-Interactive%20KG-4F46E5?style=flat-square"></a>
+  <a href="https://arxiv.org/abs/2605.09505"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2605.09505-b31b1b?style=flat-square&logo=arxiv&logoColor=white"></a>
+  <a href="https://github.com/LabRAI/EpiGraph"><img alt="GitHub stars" src="https://img.shields.io/github/stars/LabRAI/EpiGraph?style=flat-square&logo=github"></a>
+  <a href="https://github.com/LabRAI/EpiGraph/releases"><img alt="GitHub downloads" src="https://img.shields.io/github/downloads/LabRAI/EpiGraph/total?style=flat-square&logo=github"></a>
+  <a href="./LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-green?style=flat-square"></a>
+  <img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white">
+  <img alt="Graph-RAG" src="https://img.shields.io/badge/Graph--RAG-PPR%20%2B%20Paths-7C3AED?style=flat-square">
+  <img alt="EpiBench: 5 tasks" src="https://img.shields.io/badge/EpiBench-5%20tasks-14B8A6?style=flat-square">
+  <img alt="Papers: 48,166" src="https://img.shields.io/badge/papers-48%2C166-EAB308?style=flat-square">
+  <img alt="Entities: 24,324" src="https://img.shields.io/badge/entities-24%2C324-0EA5E9?style=flat-square">
+  <img alt="Triplets: 32,009" src="https://img.shields.io/badge/triplets-32%2C009-EC4899?style=flat-square">
 </p>
 
+<p><a href="./docs"><b>EpiGraph Interactive Project Page</b></a> · <a href="https://arxiv.org/abs/2605.09505"><b>Paper: arXiv:2605.09505</b></a></p>
+
+<h3>48,166 Papers · 24,324 Entities · 32,009 Triplets · 5 Evidence-Intensive Epilepsy Reasoning Tasks</h3>
+
 <p>
+  <a href="#how-to-cite">How to Cite</a> ·
+  <a href="#news">News</a> ·
   <a href="#why-epigraph">Why EpiGraph</a> ·
-  <a href="#highlights">Highlights</a> ·
+  <a href="#key-features">Key Features</a> ·
   <a href="#quick-start">Quick Start</a> ·
   <a href="#epibench-tasks">Tasks</a> ·
-  <a href="#citation">Citation</a> ·
   <a href="#repository-metrics">Metrics</a>
 </p>
 
@@ -30,6 +41,32 @@
 <p align="center">
   <img src="./docs/assets/epigraph_overview.png" alt="EpiGraph overview" width="95%">
 </p>
+
+## How To Cite
+
+If you use EpiGraph, EpiKG, EpiBench, the Graph-RAG pipeline, or this code release, please cite the arXiv version:
+
+```bibtex
+@article{dai2026epigraph,
+  title={EpiGraph: Building Generalists for Evidence-Intensive Epilepsy Reasoning in the Wild},
+  author={Dai, Yuyang and Chen, Zheng and Pradeepkumar, Jathurshan and Matsubara, Yasuko and Sun, Jimeng and Sakurai, Yasushi and Dong, Yushun},
+  journal={arXiv preprint arXiv:2605.09505},
+  eprint={2605.09505},
+  archivePrefix={arXiv},
+  url={https://arxiv.org/abs/2605.09505},
+  year={2026}
+}
+```
+
+---
+
+## News
+
+- **2026-05-13** - EpiGraph is available on arXiv as [arXiv:2605.09505](https://arxiv.org/abs/2605.09505).
+- **2026-05-13** - The project page now includes a responsive interactive KG explorer with search presets, node inspection, edge inspection, and mobile-friendly layouts.
+- **2026-05-10** - The code release includes five paper-aligned EpiBench task runners, Graph-RAG retrieval, metrics, and a private-data-aware adapter for the Harvard EEG task.
+
+---
 
 ## Why EpiGraph
 
@@ -49,7 +86,14 @@ This repository provides the paper-aligned code release for:
 
 ---
 
-## Highlights
+## Key Features
+
+- **Large-scale epilepsy evidence graph**: EpiKG connects syndromes, phenotypes, genes, treatments, outcomes, and literature-backed evidence into a graph designed for multi-hop clinical reasoning.
+- **Generalist-model benchmark**: EpiBench asks whether broad AI systems can handle epilepsy reasoning in the wild, not just answer short isolated medical questions.
+- **Graph-RAG out of the box**: Retrieval combines personalized PageRank neighborhoods with serialized evidence paths so models can ground answers in graph structure.
+- **Five clinically grounded tasks**: Evaluate clinical QA, EEG impression generation, biomarker precision medicine, treatment recommendation, and deep research planning.
+- **Private-data-aware release**: Task 2 keeps the Harvard EEG data local while preserving the schema, build logic, and evaluation interface.
+- **Interactive project page**: The included GitHub Pages site gives readers a searchable KG demo, task cards, visual overviews, and download links.
 
 <table>
   <tr>
@@ -308,24 +352,6 @@ This project is released under the [Apache License 2.0](../EpiGraph_code_release
 
 ---
 
-## Citation
-
-If you use EpiGraph, EpiBench, or this code release, please cite:
-
-```bibtex
-@article{dai2026epigraph,
-  title={EpiGraph: Building Generalists for Evidence-Intensive Epilepsy Reasoning in the Wild},
-  author={Dai, Yuyang and Chen, Zheng and Pradeepkumar, Jathurshan and Matsubara, Yasuko and Sun, Jimeng and Sakurai, Yasushi and Dong, Yushun},
-  journal={arXiv preprint arXiv:2605.09505},
-  eprint={2605.09505},
-  archivePrefix={arXiv},
-  url={https://arxiv.org/abs/2605.09505},
-  year={2026}
-}
-```
-
----
-
 ## Repository Metrics
 
 <div align="center">
@@ -339,6 +365,12 @@ If you use EpiGraph, EpiBench, or this code release, please cite:
 <img alt="Repo size" src="https://img.shields.io/github/repo-size/LabRAI/EpiGraph?style=for-the-badge&color=64748B">
 
 </div>
+
+<p align="center">
+  <a href="https://star-history.com/#LabRAI/EpiGraph&Date">
+    <img src="https://api.star-history.com/svg?repos=LabRAI/EpiGraph&type=Date" width="600" alt="Star History">
+  </a>
+</p>
 
 ---
 
