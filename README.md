@@ -7,7 +7,7 @@
 **A knowledge-graph-powered benchmark and code release for evaluating whether AI systems can reason across epilepsy literature, EEG findings, genes, treatments, and clinical outcomes.**
 
 <p>
-  <a href="./docs"><img alt="Project Page" src="https://img.shields.io/badge/Project%20Page-Interactive%20KG-4F46E5?style=flat-square"></a>
+  <a href="https://labrai.github.io/EpiGraph/"><img alt="Project Page" src="https://img.shields.io/badge/Project%20Page-Interactive%20KG-4F46E5?style=flat-square"></a>
   <a href="https://arxiv.org/abs/2605.09505"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2605.09505-b31b1b?style=flat-square&logo=arxiv&logoColor=white"></a>
   <a href="https://github.com/LabRAI/EpiGraph"><img alt="GitHub stars" src="https://img.shields.io/github/stars/LabRAI/EpiGraph?style=flat-square&logo=github"></a>
   <a href="https://github.com/LabRAI/EpiGraph/releases"><img alt="GitHub downloads" src="https://img.shields.io/github/downloads/LabRAI/EpiGraph/total?style=flat-square&logo=github"></a>
@@ -20,7 +20,7 @@
   <img alt="Triplets: 32,009" src="https://img.shields.io/badge/triplets-32%2C009-EC4899?style=flat-square">
 </p>
 
-<p><a href="./docs"><b>EpiGraph Interactive Project Page</b></a> · <a href="https://arxiv.org/abs/2605.09505"><b>Paper: arXiv:2605.09505</b></a></p>
+<p><a href="https://labrai.github.io/EpiGraph/"><b>EpiGraph Interactive Project Page</b></a> · <a href="https://arxiv.org/abs/2605.09505"><b>Paper: arXiv:2605.09505</b></a></p>
 
 <h3>48,166 Papers · 24,324 Entities · 32,009 Triplets · 5 Evidence-Intensive Epilepsy Reasoning Tasks</h3>
 
