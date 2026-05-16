@@ -14,8 +14,112 @@ const state = {
   nodePositions: new Map(),
 };
 
+const taskPerformance = {
+  t1: {
+    kicker: "Task 1 comparison",
+    title: "Clinical Decision Accuracy",
+    summary:
+      "Graph-RAG improves epilepsy MCQ accuracy and open-ended reasoning quality across all six evaluated LLMs.",
+    primary: "+11.3 pp",
+    primaryLabel: "avg. MCQ accuracy gain",
+    secondary: "+0.51",
+    secondaryLabel: "avg. judge-score gain",
+    best: "75.0%",
+    bestLabel: "best Graph-RAG MCQ accuracy",
+    rows: [
+      ["GPT-4o MCQ", "68.0%", "75.0%", "+10.3%"],
+      ["Claude S4 MCQ", "69.0%", "73.0%", "+5.8%"],
+      ["Mistral MCQ", "51.0%", "61.0%", "+19.6%"],
+      ["GPT-4o open QA", "3.61", "4.33", "+19.9%"],
+    ],
+    note:
+      "T1 combines MCQ and open-ended QA. The paper reports avg. +11.3 percentage-point MCQ gain and +0.51 LLM-as-judge gain with Graph-RAG.",
+  },
+  t2: {
+    kicker: "Task 2 comparison",
+    title: "Clinical Report Generation",
+    summary:
+      "On the restricted Harvard EEG setting, EpiKG evidence improves neurologist-style impression generation for every locally evaluated model.",
+    primary: "+13.6%",
+    primaryLabel: "avg. METEOR lift",
+    secondary: "+30.8%",
+    secondaryLabel: "largest single-model lift",
+    best: "0.34",
+    bestLabel: "best Graph-RAG METEOR",
+    rows: [
+      ["Gemma-3-4B", "0.23", "0.26", "+13.0%"],
+      ["Llama-3.2-3B", "0.29", "0.31", "+6.8%"],
+      ["MedGemma-4B", "0.26", "0.34", "+30.8%"],
+      ["Qwen3-4B", "0.26", "0.27", "+3.8%"],
+    ],
+    note:
+      "T2 uses a private Harvard EEG-derived local evaluation pipeline; the public release includes schema and runnable adapter code rather than patient data.",
+  },
+  t3: {
+    kicker: "Task 3 comparison",
+    title: "Biomarker Precision Medicine",
+    summary:
+      "Precision-medicine questions show the largest gains because graph paths expose gene, phenotype, mechanism, and antiseizure-medication links.",
+    primary: "+34.8%",
+    primaryLabel: "avg. accuracy lift",
+    secondary: "+33.2%",
+    secondaryLabel: "avg. guideline lift",
+    best: "82.0%",
+    bestLabel: "best Graph-RAG accuracy",
+    rows: [
+      ["GPT-4o", "53.0%", "69.0%", "+30.2%"],
+      ["Claude S4", "66.0%", "82.0%", "+24.2%"],
+      ["Qwen", "41.0%", "58.0%", "+41.5%"],
+      ["Mistral", "38.0%", "51.0%", "+34.2%"],
+    ],
+    note:
+      "T3 is the strongest evidence-intensive setting: all models improve, with especially large gains for open-source models.",
+  },
+  t4: {
+    kicker: "Task 4 comparison",
+    title: "Treatment Recommendation",
+    summary:
+      "Graph-RAG improves answer correctness, drug safety, guideline concordance, and KG evidence coverage on treatment recommendation.",
+    primary: "+15.6%",
+    primaryLabel: "MedQA accuracy lift",
+    secondary: "+17.2%",
+    secondaryLabel: "MMLU accuracy lift",
+    best: "83.0%",
+    bestLabel: "best Graph-RAG accuracy",
+    rows: [
+      ["GPT-4o MedQA", "72.0%", "81.0%", "+12.5%"],
+      ["Claude S4 MedQA", "70.0%", "79.0%", "+12.9%"],
+      ["GPT-4o MMLU", "74.0%", "83.0%", "+12.2%"],
+      ["Claude S4 MMLU", "71.0%", "80.0%", "+12.7%"],
+    ],
+    note:
+      "Beyond raw accuracy, MMLU Professional Medicine shows large safety and guideline gains: +28.1% DFS and +28.4% guideline concordance.",
+  },
+  t5: {
+    kicker: "Task 5 comparison",
+    title: "Deep Research Planning",
+    summary:
+      "Structured KG evidence helps models synthesize more coherent, feasible, and literature-grounded epilepsy research plans.",
+    primary: "+12.2%",
+    primaryLabel: "avg. judge-score lift",
+    secondary: "+15.6%",
+    secondaryLabel: "avg. ROUGE-L lift",
+    best: "4.25",
+    bestLabel: "best Graph-RAG judge score",
+    rows: [
+      ["GPT-4o", "3.56", "4.25", "+19.4%"],
+      ["Claude S4", "3.69", "4.13", "+11.9%"],
+      ["Llama", "3.37", "3.87", "+14.8%"],
+      ["Mistral", "3.49", "3.77", "+8.0%"],
+    ],
+    note:
+      "T5 narrows the closed/open-source gap because retrieved evidence paths help models build grounded hypotheses and study designs.",
+  },
+};
+
 initHeroCanvas();
 initQuickstartCopy();
+initTaskPerformance();
 loadGraph();
 
 async function loadGraph() {
@@ -313,6 +417,53 @@ function initQuickstartCopy() {
       button.textContent = "Copy";
     }, 1400);
   });
+}
+
+function initTaskPerformance() {
+  const cards = Array.from(document.querySelectorAll(".task-card[data-task]"));
+  cards.forEach((card) => {
+    const activate = () => renderTaskPerformance(card.dataset.task);
+    card.addEventListener("click", activate);
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        activate();
+      }
+    });
+  });
+  renderTaskPerformance("t1");
+}
+
+function renderTaskPerformance(taskId) {
+  const data = taskPerformance[taskId] || taskPerformance.t1;
+  document.querySelectorAll(".task-card[data-task]").forEach((card) => {
+    const active = card.dataset.task === taskId;
+    card.classList.toggle("active", active);
+    card.setAttribute("aria-selected", String(active));
+  });
+
+  document.getElementById("perf-kicker").textContent = data.kicker;
+  document.getElementById("perf-title").textContent = data.title;
+  document.getElementById("perf-summary").textContent = data.summary;
+  document.getElementById("perf-primary").textContent = data.primary;
+  document.getElementById("perf-primary-label").textContent = data.primaryLabel;
+  document.getElementById("perf-secondary").textContent = data.secondary;
+  document.getElementById("perf-secondary-label").textContent = data.secondaryLabel;
+  document.getElementById("perf-best").textContent = data.best;
+  document.getElementById("perf-best-label").textContent = data.bestLabel;
+  document.getElementById("perf-note").textContent = data.note;
+  document.getElementById("perf-rows").innerHTML = data.rows
+    .map(
+      ([setting, baseline, graphRag, lift]) => `
+        <tr>
+          <td>${escapeHtml(setting)}</td>
+          <td>${escapeHtml(baseline)}</td>
+          <td>${escapeHtml(graphRag)}</td>
+          <td>${escapeHtml(lift)}</td>
+        </tr>
+      `,
+    )
+    .join("");
 }
 
 function svgEl(name, attrs = {}) {

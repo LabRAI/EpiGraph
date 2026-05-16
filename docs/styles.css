@@ -489,6 +489,21 @@ section:not(.hero) {
   border-top: 8px solid var(--blue);
   border-radius: 8px;
   background: #ffffff;
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.task-card:hover,
+.task-card:focus-visible,
+.task-card.active {
+  transform: translateY(-3px);
+  border-color: rgba(47, 111, 187, 0.35);
+  box-shadow: 0 18px 42px rgba(20, 39, 68, 0.12);
+  outline: none;
+}
+
+.task-card.active {
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
 }
 
 .task-card span {
@@ -517,6 +532,111 @@ section:not(.hero) {
 .task-card.t4 span { color: var(--orange); }
 .task-card.t5 { border-top-color: var(--rose); }
 .task-card.t5 span { color: var(--rose); }
+
+.task-performance {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(420px, 1.15fr);
+  gap: 24px;
+  margin-top: 24px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 58%, #fffaf2 100%);
+  box-shadow: var(--shadow);
+}
+
+.performance-copy h3 {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.05;
+}
+
+.performance-copy p {
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.performance-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.performance-stats div {
+  padding: 14px;
+  border: 1px solid rgba(47, 111, 187, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.performance-stats strong {
+  display: block;
+  color: var(--navy);
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1;
+}
+
+.performance-stats span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.performance-table-wrap {
+  min-width: 0;
+  overflow: auto;
+}
+
+.performance-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.performance-table th,
+.performance-table td {
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.performance-table th {
+  color: #526173;
+  background: #f1f5f9;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.performance-table td {
+  color: var(--navy);
+  font-weight: 750;
+}
+
+.performance-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.performance-table td:last-child {
+  color: #0f8f7f;
+  font-weight: 900;
+}
+
+.performance-note {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
 
 .terminal,
 .citation-section pre {
@@ -593,6 +713,10 @@ footer {
   .task-card {
     min-height: 220px;
   }
+
+  .task-performance {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Tablet / narrow laptop screens: simplify navigation and stack the KG inspector. */
@@ -619,6 +743,10 @@ footer {
 
   .task-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .performance-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -661,6 +789,18 @@ footer {
   .stats-strip,
   .task-grid {
     grid-template-columns: 1fr;
+  }
+
+  .task-performance {
+    padding: 18px 14px;
+  }
+
+  .performance-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-table {
+    min-width: 460px;
   }
 
   .hero-actions {

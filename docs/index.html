@@ -147,37 +147,76 @@
               test your own model against the same clinical inputs.
             </p>
           </div>
-          <div class="task-grid">
-            <article class="task-card t1">
+          <div class="task-grid" role="tablist" aria-label="EpiBench task performance comparison">
+            <article class="task-card t1 active" role="tab" tabindex="0" aria-selected="true" data-task="t1">
               <span>T1</span>
               <h3>Clinical Decision Accuracy</h3>
               <p>MCQ and open-ended epilepsy QA over diagnosis, treatment, outcomes, and reasoning.</p>
               <code>accuracy · ROUGE-L · Token-F1</code>
             </article>
-            <article class="task-card t2">
+            <article class="task-card t2" role="tab" tabindex="0" aria-selected="false" data-task="t2">
               <span>T2</span>
               <h3>Clinical Report Generation</h3>
               <p>EEG description and patient context to neurologist-style clinical impression.</p>
               <code>ROUGE-L · report alignment</code>
             </article>
-            <article class="task-card t3">
+            <article class="task-card t3" role="tab" tabindex="0" aria-selected="false" data-task="t3">
               <span>T3</span>
               <h3>Biomarker Precision Medicine</h3>
               <p>Gene variant and phenotype to antiseizure medication selection.</p>
               <code>Top-1 · Drug Safety</code>
             </article>
-            <article class="task-card t4">
+            <article class="task-card t4" role="tab" tabindex="0" aria-selected="false" data-task="t4">
               <span>T4</span>
               <h3>Treatment Recommendation</h3>
               <p>Guideline-consistent therapy choice under patient-specific constraints.</p>
               <code>Top-1 · KG Coverage</code>
             </article>
-            <article class="task-card t5">
+            <article class="task-card t5" role="tab" tabindex="0" aria-selected="false" data-task="t5">
               <span>T5</span>
               <h3>Deep Research Planning</h3>
               <p>Literature-grounded research question and feasible study-plan generation.</p>
               <code>judge score · feasibility</code>
             </article>
+          </div>
+          <div class="task-performance" id="task-performance" role="tabpanel" aria-live="polite">
+            <div class="performance-copy">
+              <p class="section-kicker" id="perf-kicker">Task 1 comparison</p>
+              <h3 id="perf-title">Clinical Decision Accuracy</h3>
+              <p id="perf-summary">
+                Graph-RAG improves epilepsy MCQ accuracy and open-ended reasoning quality across all six evaluated LLMs.
+              </p>
+              <div class="performance-stats">
+                <div>
+                  <strong id="perf-primary">+11.3 pp</strong>
+                  <span id="perf-primary-label">avg. MCQ accuracy gain</span>
+                </div>
+                <div>
+                  <strong id="perf-secondary">+0.51</strong>
+                  <span id="perf-secondary-label">avg. LLM-as-judge gain</span>
+                </div>
+                <div>
+                  <strong id="perf-best">75.0%</strong>
+                  <span id="perf-best-label">best Graph-RAG score</span>
+                </div>
+              </div>
+            </div>
+            <div class="performance-table-wrap">
+              <table class="performance-table">
+                <thead>
+                  <tr>
+                    <th>Model / Setting</th>
+                    <th>Baseline</th>
+                    <th>Graph-RAG</th>
+                    <th>Lift</th>
+                  </tr>
+                </thead>
+                <tbody id="perf-rows"></tbody>
+              </table>
+              <p id="perf-note" class="performance-note">
+                T1 reports MCQ accuracy plus open-ended QA judge scores; values are from the paper's EpiBench results.
+              </p>
+            </div>
           </div>
         </div>
       </section>
