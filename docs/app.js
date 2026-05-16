@@ -20,8 +20,8 @@ const taskPerformance = {
     title: "Clinical Decision Accuracy",
     summary:
       "Graph-RAG improves epilepsy MCQ accuracy and open-ended reasoning quality across all six evaluated LLMs.",
-    primary: "+11.3 pp",
-    primaryLabel: "avg. MCQ accuracy gain",
+    primary: "+11.3%",
+    primaryLabel: "avg. MCQ accuracy lift",
     secondary: "+0.51",
     secondaryLabel: "avg. judge-score gain",
     best: "75.0%",
@@ -35,7 +35,7 @@ const taskPerformance = {
       ["GPT-4o open QA", "3.61", "4.33", "+19.9%"],
     ],
     note:
-      "T1 combines MCQ and open-ended QA. The paper reports avg. +11.3 percentage-point MCQ gain and +0.51 LLM-as-judge gain with Graph-RAG.",
+      "T1 combines MCQ and open-ended QA. The paper reports avg. +11.3% MCQ accuracy lift and +0.51 LLM-as-judge gain with Graph-RAG.",
   },
   t2: {
     kicker: "Task 2 comparison",
