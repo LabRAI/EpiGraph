@@ -201,18 +201,18 @@
                 </div>
               </div>
             </div>
-            <div class="performance-table-wrap">
-              <table class="performance-table">
-                <thead>
-                  <tr>
-                    <th>Model / Setting</th>
-                    <th>Baseline</th>
-                    <th>Graph-RAG</th>
-                    <th>Lift</th>
-                  </tr>
-                </thead>
-                <tbody id="perf-rows"></tbody>
-              </table>
+            <div class="performance-visual-wrap">
+              <div class="performance-chart" aria-label="Baseline versus Graph-RAG bar chart">
+                <div class="chart-head">
+                  <span id="chart-title">Baseline vs Graph-RAG</span>
+                  <span id="chart-scale">higher is better</span>
+                </div>
+                <div class="chart-bars" id="perf-chart"></div>
+                <div class="chart-legend">
+                  <span><i class="baseline-key"></i>Baseline</span>
+                  <span><i class="graphrag-key"></i>Graph-RAG</span>
+                </div>
+              </div>
               <p id="perf-note" class="performance-note">
                 T1 reports MCQ accuracy plus open-ended QA judge scores; values are from the paper's EpiBench results.
               </p>

@@ -587,48 +587,122 @@ section:not(.hero) {
   text-transform: uppercase;
 }
 
-.performance-table-wrap {
+.performance-visual-wrap {
   min-width: 0;
   overflow: auto;
 }
 
-.performance-table {
-  width: 100%;
+.performance-chart {
   min-width: 520px;
-  border-collapse: collapse;
-  overflow: hidden;
+  margin-bottom: 16px;
+  padding: 18px;
+  border: 1px solid rgba(47, 111, 187, 0.14);
   border-radius: 8px;
   background: #ffffff;
 }
 
-.performance-table th,
-.performance-table td {
-  padding: 13px 14px;
-  border-bottom: 1px solid var(--line);
-  text-align: left;
-  white-space: nowrap;
+.chart-head,
+.chart-legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
 }
 
-.performance-table th {
-  color: #526173;
-  background: #f1f5f9;
-  font-size: 12px;
+.chart-head span:first-child {
+  color: var(--navy);
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
 
-.performance-table td {
-  color: var(--navy);
-  font-weight: 750;
+.chart-head span:last-child {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
 }
 
-.performance-table tr:last-child td {
-  border-bottom: 0;
+.chart-bars {
+  display: grid;
+  gap: 13px;
+  margin-top: 18px;
 }
 
-.performance-table td:last-child {
-  color: #0f8f7f;
+.chart-row {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.chart-label {
+  color: #425166;
+  font-size: 12px;
   font-weight: 900;
+  line-height: 1.2;
+}
+
+.bar-pair {
+  display: grid;
+  gap: 6px;
+}
+
+.bar-track {
+  position: relative;
+  height: 24px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #eef3f8;
+}
+
+.bar-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 36px;
+  padding-right: 8px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.bar-fill.baseline {
+  background: linear-gradient(90deg, #7a8698, #4c596b);
+}
+
+.bar-fill.graphrag {
+  background: linear-gradient(90deg, #14b8a6, #2f6fbb);
+}
+
+.chart-legend {
+  justify-content: flex-start;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.chart-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.chart-legend i {
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+}
+
+.baseline-key {
+  background: #4c596b;
+}
+
+.graphrag-key {
+  background: #14b8a6;
 }
 
 .performance-note {
@@ -799,8 +873,13 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .performance-table {
+  .performance-chart {
     min-width: 460px;
+    padding: 14px;
+  }
+
+  .chart-row {
+    grid-template-columns: 88px 1fr;
   }
 
   .hero-actions {

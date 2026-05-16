@@ -26,6 +26,8 @@ const taskPerformance = {
     secondaryLabel: "avg. judge-score gain",
     best: "75.0%",
     bestLabel: "best Graph-RAG MCQ accuracy",
+    chartTitle: "Accuracy and judge-score gains",
+    chartScale: "mixed task metrics",
     rows: [
       ["GPT-4o MCQ", "68.0%", "75.0%", "+10.3%"],
       ["Claude S4 MCQ", "69.0%", "73.0%", "+5.8%"],
@@ -46,6 +48,8 @@ const taskPerformance = {
     secondaryLabel: "largest single-model lift",
     best: "0.34",
     bestLabel: "best Graph-RAG METEOR",
+    chartTitle: "METEOR score by model",
+    chartScale: "METEOR",
     rows: [
       ["Gemma-3-4B", "0.23", "0.26", "+13.0%"],
       ["Llama-3.2-3B", "0.29", "0.31", "+6.8%"],
@@ -66,6 +70,8 @@ const taskPerformance = {
     secondaryLabel: "avg. guideline lift",
     best: "82.0%",
     bestLabel: "best Graph-RAG accuracy",
+    chartTitle: "Precision-medicine accuracy",
+    chartScale: "top-1 accuracy",
     rows: [
       ["GPT-4o", "53.0%", "69.0%", "+30.2%"],
       ["Claude S4", "66.0%", "82.0%", "+24.2%"],
@@ -86,6 +92,8 @@ const taskPerformance = {
     secondaryLabel: "MMLU accuracy lift",
     best: "83.0%",
     bestLabel: "best Graph-RAG accuracy",
+    chartTitle: "Treatment recommendation accuracy",
+    chartScale: "top-1 accuracy",
     rows: [
       ["GPT-4o MedQA", "72.0%", "81.0%", "+12.5%"],
       ["Claude S4 MedQA", "70.0%", "79.0%", "+12.9%"],
@@ -106,6 +114,8 @@ const taskPerformance = {
     secondaryLabel: "avg. ROUGE-L lift",
     best: "4.25",
     bestLabel: "best Graph-RAG judge score",
+    chartTitle: "Research-plan judge score",
+    chartScale: "LLM-as-judge",
     rows: [
       ["GPT-4o", "3.56", "4.25", "+19.4%"],
       ["Claude S4", "3.69", "4.13", "+11.9%"],
@@ -452,18 +462,47 @@ function renderTaskPerformance(taskId) {
   document.getElementById("perf-best").textContent = data.best;
   document.getElementById("perf-best-label").textContent = data.bestLabel;
   document.getElementById("perf-note").textContent = data.note;
-  document.getElementById("perf-rows").innerHTML = data.rows
-    .map(
-      ([setting, baseline, graphRag, lift]) => `
-        <tr>
-          <td>${escapeHtml(setting)}</td>
-          <td>${escapeHtml(baseline)}</td>
-          <td>${escapeHtml(graphRag)}</td>
-          <td>${escapeHtml(lift)}</td>
-        </tr>
-      `,
-    )
+  document.getElementById("chart-title").textContent = data.chartTitle || "Baseline vs Graph-RAG";
+  document.getElementById("chart-scale").textContent = data.chartScale || "higher is better";
+  renderPerformanceChart(data.rows);
+}
+
+function renderPerformanceChart(rows) {
+  const values = rows.flatMap(([, baseline, graphRag]) => [parseScore(baseline), parseScore(graphRag)]);
+  const maxValue = Math.max(...values, 1);
+  document.getElementById("perf-chart").innerHTML = rows
+    .map(([setting, baseline, graphRag]) => {
+      const baseValue = parseScore(baseline);
+      const graphValue = parseScore(graphRag);
+      const baseWidth = Math.max(5, (baseValue / maxValue) * 100);
+      const graphWidth = Math.max(5, (graphValue / maxValue) * 100);
+      return `
+        <div class="chart-row">
+          <span class="chart-label">${escapeHtml(shortChartLabel(setting))}</span>
+          <div class="bar-pair">
+            <div class="bar-track">
+              <span class="bar-fill baseline" style="width: ${baseWidth}%">${escapeHtml(baseline)}</span>
+            </div>
+            <div class="bar-track">
+              <span class="bar-fill graphrag" style="width: ${graphWidth}%">${escapeHtml(graphRag)}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    })
     .join("");
+}
+
+function parseScore(value) {
+  return Number.parseFloat(String(value).replace("%", "")) || 0;
+}
+
+function shortChartLabel(value) {
+  return String(value)
+    .replace(" MCQ", "")
+    .replace(" open QA", " QA")
+    .replace(" MedQA", "")
+    .replace(" MMLU", " MMLU");
 }
 
 function svgEl(name, attrs = {}) {
